@@ -1,0 +1,1399 @@
+{
+  "execution_info": {
+    "total_companies": 1000,
+    "companies_with_errors": 0,
+    "companies_missing_metrics": 979,
+    "total_metrics_validated": 207210,
+    "total_errors": 0,
+    "execution_time_seconds": 15.774613618850708
+  },
+  "error_distribution": {
+    "inflow_growth_rate": 0,
+    "inflow_daily_average": 0,
+    "outflow_daily_average": 0,
+    "latest_balance": 0,
+    "balance_minimum": 0,
+    "balance_average": 0,
+    "change_in_balance": 0,
+    "weekday_balance_average": 0,
+    "weekday_with_highest_avg": 0,
+    "weekday_with_lowest_avg": 0,
+    "data_volume": 0,
+    "date_range": 0,
+    "data_freshness": 0,
+    "has_balance_ratio": 0,
+    "data_coverage": 0,
+    "accounts": 0,
+    "potentially_duplicated_account_pairs": 0,
+    "inflows": 0,
+    "outflows": 0,
+    "inflow_amount": 0,
+    "confidence": 0,
+    "revenue_anomalies": 0,
+    "last_debt_investment": 0,
+    "last_debt_investment_days": 0,
+    "debt_repayment_daily_average": 0,
+    "debt_investment": 0,
+    "debt_investors": 0,
+    "debt_investment_count": 0,
+    "debt_repayment": 0,
+    "debt_service_coverage_ratio": 0,
+    "merchant_heron_ids": 0,
+    "predicted_nsf_fees": 0,
+    "predicted_balance_daily_average": 0,
+    "heron_score": 0,
+    "category_coverage": 0,
+    "merchant_coverage": 0,
+    "unconnected_account_ratio": 0,
+    "revenue_daily_average": 0,
+    "cogs_daily_average": 0,
+    "opex_daily_average": 0,
+    "revenue_sources": 0,
+    "revenue": 0,
+    "annualized_revenue": 0,
+    "cogs": 0,
+    "average_credit_card_spend": 0,
+    "opex": 0,
+    "revenue_profit_and_loss": 0,
+    "annualized_revenue_profit_and_loss": 0,
+    "cogs_profit_and_loss": 0,
+    "opex_profit_and_loss": 0,
+    "revenue_monthly_average": 0,
+    "revenue_growth_rate": 0,
+    "gross_operating_cashflow_daily_average": 0,
+    "net_operating_cashflow_daily_average": 0,
+    "gross_operating_cashflow": 0,
+    "net_operating_cashflow": 0,
+    "gross_operating_cashflow_profit_and_loss": 0,
+    "net_operating_cashflow_profit_and_loss": 0,
+    "deposit_days": 0,
+    "nsf_fees": 0,
+    "nsf_days": 0,
+    "debt_collection": 0,
+    "atm_withdrawals": 0,
+    "tax_payments": 0,
+    "tax_payment_amount": 0,
+    "negative_balance_days": 0,
+    "negative_balance_days_by_account": 0,
+    "distinct_mcas_from_outflows": 0,
+    "distinct_mcas_from_inflows": 0
+  },
+  "severity_distribution": {
+    "ERROR": 0,
+    "WARNING": 0,
+    "INFO": 0
+  },
+  "metric_statistics": {
+    "inflow_growth_rate": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -1.0,
+        "max": 125.8925997360674,
+        "mean": 0.37957705405858916,
+        "median": 0.01511136250430425,
+        "std": 4.264395286688158
+      }
+    },
+    "inflow_daily_average": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.000657534,
+        "max": 113942.78841095892,
+        "mean": 2289.6798047126676,
+        "median": 817.5762739726027,
+        "std": 5617.822438554559
+      }
+    },
+    "outflow_daily_average": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -296823.2255,
+        "max": 0.0,
+        "mean": -3542.250262797453,
+        "median": -878.97123285,
+        "std": 15466.347752576214
+      }
+    },
+    "latest_balance": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -60994.55,
+        "max": 18134946.17,
+        "mean": 104554.18873018799,
+        "median": 11969.16,
+        "std": 639654.5069854374
+      }
+    },
+    "balance_minimum": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -154413000000.0,
+        "max": 15929138.48,
+        "mean": -31453080.864646938,
+        "median": 190.555,
+        "std": 2183551918.3750615
+      }
+    },
+    "balance_average": {
+      "total_validations": 9000,
+      "success_count": 9000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 9000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -13267828073.0,
+        "max": 1434270982.8846028,
+        "mean": -1634598.996654912,
+        "median": 9958.29588549732,
+        "std": 175343967.42335078
+      }
+    },
+    "change_in_balance": {
+      "total_validations": 3000,
+      "success_count": 3000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 3000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -1586358940.0,
+        "max": 277854929.0,
+        "mean": -932322.3094861698,
+        "median": -20.18,
+        "std": 41277546.319182515
+      }
+    },
+    "weekday_balance_average": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -30379923.68,
+        "max": 793192521.0,
+        "mean": 840967.0436307762,
+        "median": 8841.913887517241,
+        "std": 25096207.533712562
+      }
+    },
+    "weekday_with_highest_avg": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 6.0,
+        "mean": 2.216704282069768,
+        "median": 2.0,
+        "std": 1.6805975083538687
+      }
+    },
+    "weekday_with_lowest_avg": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "balance",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 6.0,
+        "mean": 2.1793564033359476,
+        "median": 2.0,
+        "std": 1.656803964849551
+      }
+    },
+    "data_volume": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 226.0,
+        "max": 82380.0,
+        "mean": 4913.297,
+        "median": 3293.5,
+        "std": 5676.801685526015
+      }
+    },
+    "date_range": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 705.0,
+        "max": 4664.0,
+        "mean": 1726.792,
+        "median": 1746.0,
+        "std": 649.3975259700333
+      }
+    },
+    "data_freshness": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0
+      }
+    },
+    "has_balance_ratio": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.1270358306188925,
+        "max": 1.0,
+        "mean": 0.8498605220375314,
+        "median": 0.9727791932639497,
+        "std": 0.18830491942875818
+      }
+    },
+    "data_coverage": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.1426978818283166,
+        "max": 1.0,
+        "mean": 0.5640219856915674,
+        "median": 0.5759614702624845,
+        "std": 0.18211446721439103
+      }
+    },
+    "accounts": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 1.0,
+        "max": 184.0,
+        "mean": 4.309,
+        "median": 3.0,
+        "std": 7.4048307880734185
+      }
+    },
+    "potentially_duplicated_account_pairs": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0
+      }
+    },
+    "inflows": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 8011.0,
+        "mean": 140.963,
+        "median": 59.0,
+        "std": 280.60271280050017
+      }
+    },
+    "outflows": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 9357.0,
+        "mean": 329.2768,
+        "median": 142.0,
+        "std": 552.2138677919634
+      }
+    },
+    "inflow_amount": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 19970579.71,
+        "mean": 415123.13367,
+        "median": 147516.305,
+        "std": 1055766.3113036244
+      }
+    },
+    "confidence": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.4254486736906528,
+        "max": 0.9578261383172946,
+        "mean": 0.7586318129005362,
+        "median": 0.7674133104018999,
+        "std": 0.07354339728966044
+      }
+    },
+    "revenue_anomalies": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "data_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 48.0,
+        "mean": 0.743,
+        "median": 0.0,
+        "std": 2.643662421717266
+      }
+    },
+    "last_debt_investment": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.000866108,
+        "max": 75000.0,
+        "mean": 6167.101448923326,
+        "median": 462.83,
+        "std": 13298.2086891982
+      }
+    },
+    "last_debt_investment_days": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 3786.0,
+        "mean": 340.7916995139736,
+        "median": 81.5,
+        "std": 490.7269347573496
+      }
+    },
+    "debt_repayment_daily_average": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 103485.766,
+        "mean": 173.7474735143277,
+        "median": 10.052054794520547,
+        "std": 1762.3535346208675
+      }
+    },
+    "debt_investment": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 4265000.0,
+        "mean": 9802.808146,
+        "median": 0.0,
+        "std": 93777.24154585086
+      }
+    },
+    "debt_investors": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 7.0,
+        "mean": 0.0422,
+        "median": 0.0,
+        "std": 0.2592665809548157
+      }
+    },
+    "debt_investment_count": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 100.0,
+        "mean": 2.817,
+        "median": 0.0,
+        "std": 8.50608670306152
+      }
+    },
+    "debt_repayment": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 4253108.15,
+        "mean": 23502.387565364716,
+        "median": 979.385,
+        "std": 145107.73157104474
+      }
+    },
+    "debt_service_coverage_ratio": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "debt",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -621609.3846,
+        "max": 18465.12,
+        "mean": -171.89865107745018,
+        "median": 0.47604243793906437,
+        "std": 9884.949999707083
+      }
+    },
+    "merchant_heron_ids": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "heron",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.000931474,
+        "max": 0.999580836,
+        "mean": 0.49522887693506373,
+        "median": 0.4798671367497357,
+        "std": 0.29121071866160625
+      }
+    },
+    "predicted_nsf_fees": {
+      "total_validations": 3000,
+      "success_count": 3000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 3000
+      },
+      "group": "heron",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.001059878,
+        "max": 0.9917408227920532,
+        "mean": 0.11312870025615045,
+        "median": 0.025434760564629053,
+        "std": 0.21877336393627358
+      }
+    },
+    "predicted_balance_daily_average": {
+      "total_validations": 3000,
+      "success_count": 3000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 3000
+      },
+      "group": "heron",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -67491219.27,
+        "max": 182581794.5,
+        "mean": 143884.16479,
+        "median": 5022.18,
+        "std": 6167769.886789901
+      }
+    },
+    "heron_score": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "heron",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.000548219,
+        "max": 985.0,
+        "mean": 197.9713870278635,
+        "median": 0.6949058066117271,
+        "std": 337.8271874878968
+      }
+    },
+    "category_coverage": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "processing_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 1.0,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0
+      }
+    },
+    "merchant_coverage": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "processing_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 0.8488078541374474,
+        "mean": 0.27310912634791484,
+        "median": 0.2577156641083844,
+        "std": 0.1795374102833103
+      }
+    },
+    "unconnected_account_ratio": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "processing_quality",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 1656.9200779727096,
+        "mean": 4.881986189748246,
+        "median": 0.14253869474978184,
+        "std": 67.74479900369312
+      }
+    },
+    "revenue_daily_average": {
+      "total_validations": 9000,
+      "success_count": 9000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 9000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 75295.98466666667,
+        "mean": 802.840724219304,
+        "median": 6.060624999999999,
+        "std": 2882.1705999848346
+      }
+    },
+    "cogs_daily_average": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 46291.07633333333,
+        "mean": 179.30819355593002,
+        "median": 1.7351388888888888,
+        "std": 1904.245961290455
+      }
+    },
+    "opex_daily_average": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 345146.75633333327,
+        "mean": 2152.943980061844,
+        "median": 370.5050972222222,
+        "std": 14182.824967502534
+      }
+    },
+    "revenue_sources": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 25.0,
+        "mean": 1.872,
+        "median": 1.0,
+        "std": 2.5964622084675137
+      }
+    },
+    "revenue": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 14562046.58,
+        "mean": 242743.3501726249,
+        "median": 48509.035,
+        "std": 725920.8927420172
+      }
+    },
+    "annualized_revenue": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 24156677.493548386,
+        "mean": 521178.1830886427,
+        "median": 135601.83204419888,
+        "std": 1307652.2824316868
+      }
+    },
+    "cogs": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 14082378.88,
+        "mean": 29853.254216225236,
+        "median": 220.95,
+        "std": 371862.515037998
+      }
+    },
+    "average_credit_card_spend": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 1265492.5841666667,
+        "mean": 6164.17954139548,
+        "median": 533.3466666666667,
+        "std": 39155.8345871241
+      }
+    },
+    "opex": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 100808471.3,
+        "mean": 353431.66551905364,
+        "median": 51376.04,
+        "std": 2605617.281362382
+      }
+    },
+    "revenue_profit_and_loss": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 14562046.58,
+        "mean": 242743.35011468327,
+        "median": 48509.035,
+        "std": 725920.8927613924
+      }
+    },
+    "annualized_revenue_profit_and_loss": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 24156677.493548386,
+        "mean": 521178.18276291026,
+        "median": 135601.83204419888,
+        "std": 1307652.2825615108
+      }
+    },
+    "cogs_profit_and_loss": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 14082378.88,
+        "mean": 29853.254281060792,
+        "median": 220.95,
+        "std": 371862.5150327931
+      }
+    },
+    "opex_profit_and_loss": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 100808471.3,
+        "mean": 353431.6651947012,
+        "median": 51376.04,
+        "std": 2605617.281406378
+      }
+    },
+    "revenue_monthly_average": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 2051663.02,
+        "mean": 43625.76191644354,
+        "median": 11337.307083333333,
+        "std": 109669.99574352146
+      }
+    },
+    "revenue_growth_rate": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -1.0,
+        "max": 3265.9062397909174,
+        "mean": 6.491502000324182,
+        "median": 0.0620274545890835,
+        "std": 110.19688894065439
+      }
+    },
+    "gross_operating_cashflow_daily_average": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -10325.59304,
+        "max": 41081.574,
+        "mean": 1265.400710558535,
+        "median": 350.58113888888886,
+        "std": 2817.793014265454
+      }
+    },
+    "net_operating_cashflow_daily_average": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -306345.082,
+        "max": 24690.69961643836,
+        "mean": -887.5432695038136,
+        "median": -2.9617777775,
+        "std": 13109.372647739328
+      }
+    },
+    "gross_operating_cashflow": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -3880340.88,
+        "max": 9288053.34,
+        "mean": 212890.0960325,
+        "median": 44904.51,
+        "std": 580237.6539809201
+      }
+    },
+    "net_operating_cashflow": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -95463244.29,
+        "max": 9029900.48,
+        "mean": -140541.56885500002,
+        "median": -132.45,
+        "std": 2426459.200494059
+      }
+    },
+    "gross_operating_cashflow_profit_and_loss": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -3880340.88,
+        "max": 9288053.34,
+        "mean": 212890.0960325,
+        "median": 44904.51,
+        "std": 580237.6539809201
+      }
+    },
+    "net_operating_cashflow_profit_and_loss": {
+      "total_validations": 4000,
+      "success_count": 4000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 4000
+      },
+      "group": "profit_and_loss",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": -95463244.29,
+        "max": 9029900.48,
+        "mean": -140541.56885500002,
+        "median": -132.45,
+        "std": 2426459.200494059
+      }
+    },
+    "deposit_days": {
+      "total_validations": 9000,
+      "success_count": 9000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 9000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 363.0,
+        "mean": 57.55319136604563,
+        "median": 36.0,
+        "std": 61.57486988859939
+      }
+    },
+    "nsf_fees": {
+      "total_validations": 6000,
+      "success_count": 6000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 6000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 1044.0,
+        "mean": 2.888,
+        "median": 0.0,
+        "std": 22.250770533474416
+      }
+    },
+    "nsf_days": {
+      "total_validations": 9000,
+      "success_count": 9000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 9000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 337.0,
+        "mean": 1.08335878245732,
+        "median": 0.0751305802676837,
+        "std": 7.120419939428013
+      }
+    },
+    "debt_collection": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0
+      }
+    },
+    "atm_withdrawals": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 638664.65,
+        "mean": 7238.4877400000005,
+        "median": 10.0,
+        "std": 37609.845516253845
+      }
+    },
+    "tax_payments": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 461.0,
+        "mean": 14.382,
+        "median": 2.0,
+        "std": 32.339388924344256
+      }
+    },
+    "tax_payment_amount": {
+      "total_validations": 1000,
+      "success_count": 1000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 1000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 2243604.92,
+        "mean": 34078.71435,
+        "median": 3388.795,
+        "std": 107745.26238183159
+      }
+    },
+    "negative_balance_days": {
+      "total_validations": 5000,
+      "success_count": 5000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 5000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 364.0,
+        "mean": 22.130779655253257,
+        "median": 0.0,
+        "std": 47.98733674089493
+      }
+    },
+    "negative_balance_days_by_account": {
+      "total_validations": 6000,
+      "success_count": 6000,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 6000
+      },
+      "group": "risk_flag",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 39654.0,
+        "mean": 62.869675687128,
+        "median": 7.0,
+        "std": 543.9742663411138
+      }
+    },
+    "distinct_mcas_from_outflows": {
+      "total_validations": 105,
+      "success_count": 105,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 105
+      },
+      "group": "heron",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0
+      }
+    },
+    "distinct_mcas_from_inflows": {
+      "total_validations": 105,
+      "success_count": 105,
+      "error_count": 0,
+      "severity_counts": {
+        "error": 105
+      },
+      "group": "heron",
+      "success_rate": 1.0,
+      "value_stats": {
+        "min": 0.0,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "std": 0.0
+      }
+    }
+  },
+  "group_statistics": {
+    "balance": {
+      "total_validations": 24000,
+      "success_count": 24000,
+      "error_count": 0,
+      "metrics": [
+        "weekday_balance_average",
+        "weekday_with_lowest_avg",
+        "weekday_with_highest_avg",
+        "balance_average",
+        "latest_balance",
+        "change_in_balance",
+        "inflow_daily_average",
+        "balance_minimum",
+        "inflow_growth_rate",
+        "outflow_daily_average"
+      ],
+      "success_rate": 1.0
+    },
+    "data_quality": {
+      "total_validations": 20000,
+      "success_count": 20000,
+      "error_count": 0,
+      "metrics": [
+        "data_volume",
+        "data_coverage",
+        "data_freshness",
+        "date_range",
+        "confidence",
+        "inflows",
+        "has_balance_ratio",
+        "potentially_duplicated_account_pairs",
+        "outflows",
+        "inflow_amount",
+        "revenue_anomalies",
+        "accounts"
+      ],
+      "success_rate": 1.0
+    },
+    "debt": {
+      "total_validations": 26000,
+      "success_count": 26000,
+      "error_count": 0,
+      "metrics": [
+        "debt_investment",
+        "last_debt_investment_days",
+        "last_debt_investment",
+        "debt_service_coverage_ratio",
+        "debt_investors",
+        "debt_repayment",
+        "debt_repayment_daily_average",
+        "debt_investment_count"
+      ],
+      "success_rate": 1.0
+    },
+    "heron": {
+      "total_validations": 8210,
+      "success_count": 8210,
+      "error_count": 0,
+      "metrics": [
+        "merchant_heron_ids",
+        "heron_score",
+        "distinct_mcas_from_outflows",
+        "distinct_mcas_from_inflows",
+        "predicted_nsf_fees",
+        "predicted_balance_daily_average"
+      ],
+      "success_rate": 1.0
+    },
+    "processing_quality": {
+      "total_validations": 3000,
+      "success_count": 3000,
+      "error_count": 0,
+      "metrics": [
+        "category_coverage",
+        "merchant_coverage",
+        "unconnected_account_ratio"
+      ],
+      "success_rate": 1.0
+    },
+    "profit_and_loss": {
+      "total_validations": 87000,
+      "success_count": 87000,
+      "error_count": 0,
+      "metrics": [
+        "opex_daily_average",
+        "revenue_profit_and_loss",
+        "net_operating_cashflow",
+        "opex_profit_and_loss",
+        "revenue_daily_average",
+        "net_operating_cashflow_daily_average",
+        "revenue",
+        "average_credit_card_spend",
+        "revenue_growth_rate",
+        "gross_operating_cashflow",
+        "revenue_monthly_average",
+        "annualized_revenue",
+        "revenue_sources",
+        "opex",
+        "gross_operating_cashflow_daily_average",
+        "annualized_revenue_profit_and_loss",
+        "cogs",
+        "cogs_daily_average",
+        "gross_operating_cashflow_profit_and_loss",
+        "net_operating_cashflow_profit_and_loss",
+        "cogs_profit_and_loss"
+      ],
+      "success_rate": 1.0
+    },
+    "risk_flag": {
+      "total_validations": 39000,
+      "success_count": 39000,
+      "error_count": 0,
+      "metrics": [
+        "nsf_fees",
+        "nsf_days",
+        "tax_payment_amount",
+        "negative_balance_days_by_account",
+        "tax_payments",
+        "deposit_days",
+        "atm_withdrawals",
+        "debt_collection",
+        "negative_balance_days"
+      ],
+      "success_rate": 1.0
+    }
+  },
+  "completeness_summary": {
+    "total_companies": 1000,
+    "companies_with_missing_metrics": 979,
+    "companies_with_all_metrics": 21,
+    "percent_complete": 2.1,
+    "unique_missing_metrics": 2,
+    "most_frequently_missing": {
+      "distinct_mcas_from_inflows": 979,
+      "distinct_mcas_from_outflows": 979
+    }
+  }
+}
