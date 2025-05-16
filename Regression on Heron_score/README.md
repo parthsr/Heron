@@ -8,8 +8,16 @@ The Heron score is calculated using a machine learning model that takes into acc
 - Financial metrics (inflow growth rate, latest balance, debt repayment)
 - Operational metrics (transaction counts, customer interactions)
 - Risk indicators (fraud scores, risk assessments)
+- Data quality metrics (confidence, coverage, freshness)
+- Interaction features (balance-revenue ratios, risk scores)
 
 A score greater than 1 indicates a higher likelihood of company default.
+
+## Model Performance
+Current model performance metrics:
+- R² Score: 0.8268 (82.68% of variance explained)
+- RMSE: 142.5139
+- MAE: 184.4260
 
 ## Installation
 
@@ -28,7 +36,10 @@ pip install -r requirements.txt
 
 ### 1. Prepare Data
 - Ensure your data is in wide format (e.g., `company_metrics_wide.csv` in the project root).
-- The script will dynamically detect and normalize all relevant columns based on their name patterns (no need to manually specify columns).
+- The script will:
+  - Handle outliers using IQR method
+  - Create interaction features
+  - Dynamically normalize all relevant columns based on their name patterns
 
 ### 2. Train the Model
 To train the model using historical data:
@@ -36,11 +47,13 @@ To train the model using historical data:
 python Regression\ on\ Heron_score/train_model.py --input company_metrics_wide.csv --model-output Regression\ on\ Heron_score/model.pkl
 ```
 - This will:
+  - Handle outliers and create interaction features
   - Dynamically normalize all relevant metrics
-  - Train a regression model
+  - Perform feature selection
+  - Train a Random Forest model
   - Save outputs in `Regression on Heron_score/`:
     - `company_metrics_wide_normalized.csv` (normalized data)
-    - `model.pkl` (trained model)
+    - `model.pkl` (trained model and feature selector)
     - `feature_importance.csv` (feature importances)
 
 ### 3. Export Regression Formula and Evaluation
@@ -61,10 +74,57 @@ python Regression\ on\ Heron_score/calculate_scores.py --input path/to/input.csv
 - The input CSV should contain all required features (see wide format).
 - The output will be a CSV file with the calculated scores.
 
+## Model Features
+
+### Base Features
+- Financial metrics (balance, revenue, cashflow)
+- Operational metrics (transactions, customer data)
+- Risk indicators (NSF days, negative balance days)
+- Data quality metrics (confidence, coverage)
+
+### Interaction Features
+- `balance_revenue_ratio`: Balance to revenue ratio
+- `balance_cashflow_ratio`: Balance to cashflow ratio
+- `revenue_growth_stability`: Revenue growth × confidence
+- `risk_score`: Combined risk metric from NSF and negative balance days
+
+### Feature Importance
+Top 3 most important features:
+1. `confidence_latest` (0.9308)
+2. `merchant_coverage_latest` (0.0395)
+3. `change_in_balance_last_90_days` (0.0298)
+
+#### How Feature Importance is Calculated
+The Random Forest model calculates feature importance using the following method:
+
+1. **Mean Decrease in Impurity (MDI)**:
+   - For each feature, the model tracks how much the impurity (variance) in the target variable decreases when that feature is used for splitting
+   - The importance is normalized so that all features sum to 1.0
+   - Higher values indicate features that are more important for making accurate predictions
+
+2. **Calculation Process**:
+   - Each tree in the forest calculates feature importance independently
+   - For each node in each tree:
+     - Calculate the impurity before the split
+     - Calculate the impurity after the split
+     - The difference is weighted by the number of samples in the node
+   - The final importance is the average across all trees
+
+3. **Interpretation**:
+   - Values range from 0 to 1
+   - A value of 0.9308 for `confidence_latest` means this feature is responsible for 93.08% of the model's predictive power
+   - Features with very low importance (close to 0) have minimal impact on predictions
+
+4. **Advantages of This Method**:
+   - Captures non-linear relationships
+   - Accounts for feature interactions
+   - Robust to outliers
+   - Provides a normalized measure of importance
+
 ## Output Files
 - `company_metrics_wide_normalized.csv`: Normalized data used for regression and scoring
-- `model.pkl`: Trained regression model
-- `feature_importance.csv`: Feature importances from the regression model
+- `model.pkl`: Trained Random Forest model and feature selector
+- `feature_importance.csv`: Feature importances from the model
 - `regression_coefficients.csv`: All regression coefficients
 - `regression_formula.txt`: Full regression formula
 - `regression_evaluation.txt`: Model evaluation metrics (R², RMSE, MAE)
@@ -75,14 +135,17 @@ python Regression\ on\ Heron_score/calculate_scores.py --input path/to/input.csv
 - `calculate_scores.py`: Score new data using the trained model
 
 ## Notes
-- The normalization is dynamic: any new columns with relevant prefixes will be normalized automatically.
-- You do **not** need to keep all intermediate files; only the outputs you care about for future runs or documentation.
-- All outputs are saved in the `Regression on Heron_score` folder for organization.
+- The model uses Random Forest with feature selection for better accuracy
+- Outliers are handled using the IQR method
+- Interaction features are automatically created to capture complex relationships
+- Data quality metrics are crucial for accurate predictions
+- All outputs are saved in the `Regression on Heron_score` folder for organization
 
 ## Interpreting Outputs
-- **regression_formula.txt**: Shows the full regression equation for `heron_score_latest`.
-- **regression_coefficients.csv**: Lists the coefficient for each feature.
-- **regression_evaluation.txt**: Shows R² (explained variance), RMSE (root mean squared error), and MAE (mean absolute error) for the model.
+- **regression_formula.txt**: Shows the full regression equation for `heron_score_latest`
+- **regression_coefficients.csv**: Lists the coefficient for each feature
+- **regression_evaluation.txt**: Shows R² (explained variance), RMSE (root mean squared error), and MAE (mean absolute error) for the model
+- **feature_importance.csv**: Shows the relative importance of each feature in the Random Forest model
 
 ## File Structure
 - `Regression on Heron_score/`: All scripts and outputs

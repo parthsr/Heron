@@ -1,121 +1,86 @@
 import pandas as pd
 import numpy as np
-from heron_calculator import HeronCalculator
-import logging
-import argparse
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
-# Set up logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+# ------------------------------------------------------------------
+# Load the raw, wide-format company metrics that you uploaded earlier
+# ------------------------------------------------------------------
+raw_path = "/mnt/data/company_metrics_wide.csv"
+df = pd.read_csv(raw_path)
 
-def normalize_financial_metrics(data):
-    """Normalize financial metrics using Min-Max scaling"""
-    financial_metrics = [
-        'annualized_revenue', 'balance_average', 'balance_minimum',
-        'latest_balance', 'inflow_amount', 'outflows', 'revenue',
-        'tax_payment_amount', 'gross_operating_cashflow',
-        'net_operating_cashflow'
-    ]
-    
-    scaler = MinMaxScaler()
-    for metric in financial_metrics:
-        if metric in data.columns:
-            # Handle any negative values by adding minimum value
-            min_val = data[metric].min()
-            if min_val < 0:
-                data[metric] = data[metric] - min_val
-            # Apply log transformation if data is right-skewed
-            if data[metric].skew() > 1:
-                data[metric] = np.log1p(data[metric])
-            # Normalize
-            data[metric] = scaler.fit_transform(data[[metric]])
-    
-    return data
+# ------------------------------------------------------
+# Utility: normalise a list of columns with given scaler
+# ------------------------------------------------------
+def normalise_columns(frame, cols, *, use_log, scaler_cls):
+    """
+    Normalise the columns `cols` of `frame` in-place.
 
-def normalize_growth_metrics(data):
-    """Normalize growth metrics using Standard scaling"""
-    growth_metrics = ['inflow_growth_rate', 'revenue_growth_rate']
-    
-    scaler = StandardScaler()
-    for metric in growth_metrics:
-        if metric in data.columns:
-            data[metric] = scaler.fit_transform(data[[metric]])
-    
-    return data
+    Parameters
+    ----------
+    frame : pandas.DataFrame  – the data to edit.
+    cols  : iterable[str]     – column names to process.
+    use_log : bool            – apply log1p when skew > 1.
+    scaler_cls : sklearn scaler class – MinMaxScaler, StandardScaler, …
+    """
+    for col in cols:
+        if col not in frame.columns:
+            continue
 
-def normalize_count_metrics(data):
-    """Normalize count-based metrics using log transformation and Min-Max scaling"""
-    count_metrics = [
-        'inflows', 'outflows', 'tax_payments',
-        'debt_investment_count', 'negative_balance_days',
-        'nsf_days'
-    ]
-    
-    scaler = MinMaxScaler()
-    for metric in count_metrics:
-        if metric in data.columns:
-            # Apply log transformation
-            data[metric] = np.log1p(data[metric])
-            # Normalize
-            data[metric] = scaler.fit_transform(data[[metric]])
-    
-    return data
+        # ensure numeric (silently converts non-numeric to NaN)
+        s = pd.to_numeric(frame[col], errors="coerce").astype(float)
 
-def load_data(data_path):
-    """Load input data"""
-    logger.info("Loading data from %s", data_path)
-    data = pd.read_csv(data_path)
-    return data
+        # shift negatives so min ≥ 0
+        if s.min(skipna=True) < 0:
+            s = s - s.min(skipna=True)
 
-def save_scores(scores, output_path):
-    """Save calculated scores to file"""
-    logger.info("Saving scores to %s", output_path)
-    scores_df = pd.DataFrame(scores)
-    scores_df.to_csv(output_path, index=False)
+        # optional log-transform for right-skewed data
+        if use_log and s.skew(skipna=True) > 1:
+            s = np.log1p(s)
 
-def main():
-    parser = argparse.ArgumentParser(description='Calculate Heron scores for input data')
-    parser.add_argument('--input', required=True, help='Path to input data CSV')
-    parser.add_argument('--output', required=True, help='Path to save output scores CSV')
-    args = parser.parse_args()
-    
-    # Load data
-    data = load_data(args.input)
-    
-    # Normalize metrics
-    logger.info("Normalizing metrics")
-    data = normalize_financial_metrics(data)
-    data = normalize_growth_metrics(data)
-    data = normalize_count_metrics(data)
-    
-    # Initialize calculator
-    calculator = HeronCalculator()
-    
-    try:
-        # Load existing model
-        calculator.load_model()
-    except FileNotFoundError:
-        logger.error("No trained model found. Please train the model first using train_model.py")
-        return
-    
-    # Calculate scores
-    logger.info("Calculating scores")
-    scores = calculator.calculate_score(data)
-    
-    # Save results
-    save_scores(scores, args.output)
-    
-    # Log summary statistics
-    logger.info("Score statistics:")
-    logger.info("Mean: %.2f", np.mean(scores))
-    logger.info("Median: %.2f", np.median(scores))
-    logger.info("Min: %.2f", np.min(scores))
-    logger.info("Max: %.2f", np.max(scores))
-    logger.info("Standard Deviation: %.2f", np.std(scores))
+        # fit-transform with a *fresh* scaler each time
+        scaler = scaler_cls()
+        # reshape needed because scalers expect 2-D array
+        scaled = scaler.fit_transform(s.values.reshape(-1, 1)).flatten()
 
-if __name__ == "__main__":
-    main() 
+        frame[col] = scaled
+
+    return frame
+
+
+# ---------------------------------------------
+# 1. Detect which columns belong to which block
+# ---------------------------------------------
+financial_prefixes = [
+    "annualized_revenue",
+    "balance_average",
+    "balance_minimum",
+    "latest_balance",
+    "inflow_amount",
+    "outflows",
+    "revenue",
+    "tax_payment_amount",
+    "gross_operating_cashflow",
+    "net_operating_cashflow",
+]
+
+fin_cols   = [c for c in df.columns if any(c.startswith(p) for p in financial_prefixes)]
+growth_cols = [c for c in df.columns if c.endswith("_growth_rate")]
+count_cols  = [
+    c for c in df.columns
+    if c.endswith("_count") or c.endswith("_days") or c in ["inflows", "outflows", "tax_payments"]
+]
+
+# --------------------------------------------------
+# 2. Apply the three different normalisation schemes
+# --------------------------------------------------
+df = normalise_columns(df, fin_cols,   use_log=True,  scaler_cls=MinMaxScaler)
+df = normalise_columns(df, growth_cols, use_log=False, scaler_cls=StandardScaler)
+df = normalise_columns(df, count_cols,  use_log=True,  scaler_cls=MinMaxScaler)
+
+# ------------------------------------------------------
+# 3. Save the fully-normalised data for you to download
+# ------------------------------------------------------
+output_path = "/mnt/data/company_metrics_wide_normalized_fixed.csv"
+df.to_csv(output_path, float_format="%.9f", index=False)
+
+output_path
