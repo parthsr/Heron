@@ -1,0 +1,5 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,iqr_distance,outlier_score,outlier_method,metric_name
+eus_Za2F6FxwCSpBo6oW69XP8w,has_balance_ratio,latest,0.1270358306188925,data_quality,ratio,The ratio of transactions with a balance and account id value,1.9149771075912339,1.9149771075912339,IQR,has_balance_ratio
+eus_BoshMCo7zeGgaxyxhsRivo,has_balance_ratio,latest,0.2368501529051987,data_quality,ratio,The ratio of transactions with a balance and account id value,1.5475347965112143,1.5475347965112143,IQR,has_balance_ratio
+eus_GgHoJDr9p9BZsr8M45DfxZ,has_balance_ratio,latest,0.1566771819137749,data_quality,ratio,The ratio of transactions with a balance and account id value,1.8157961774851392,1.8157961774851392,IQR,has_balance_ratio
+eus_4EPN6NSoTAQVQmg4yTz2G8,has_balance_ratio,latest,0.240761301,data_quality,ratio,The ratio of transactions with a balance and account id value,1.5344479671704734,1.5344479671704734,IQR,has_balance_ratio

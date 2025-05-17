@@ -11,7 +11,6 @@ def main():
     
     # Define scripts to run
     scripts = [
-        "metric_distribution_analysis.py",
         "outlier_analysis.py",
         "correlation_analysis.py"
     ]

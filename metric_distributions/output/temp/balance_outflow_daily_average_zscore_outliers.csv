@@ -1,0 +1,8 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_k9wiS4YL7SK6inyJV2ocag,outflow_daily_average,last_365_days,-166152.927,balance,amount,Daily average outflow,10.513838130279764,Z-score,outflow_daily_average
+eus_WQT7NNsuuuVkDmcy7Fqrf7,outflow_daily_average,last_365_days,-140016.2148,balance,amount,Daily average outflow,8.823929651683294,Z-score,outflow_daily_average
+eus_cFTa6dWJVEtmuGqJd5HG7G,outflow_daily_average,last_365_days,-65780.92153,balance,amount,Daily average outflow,4.024134997018641,Z-score,outflow_daily_average
+eus_X8Hs3ftrq6fdS3sZvUNzcv,outflow_daily_average,last_365_days,-296823.2255,balance,amount,Daily average outflow,18.96252301635666,Z-score,outflow_daily_average
+eus_5DQGx45M3qVWgaKhBgAFzB,outflow_daily_average,last_365_days,-52726.07334,balance,amount,Daily average outflow,3.180054131978899,Z-score,outflow_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,outflow_daily_average,last_365_days,-263069.1076,balance,amount,Daily average outflow,16.780099703498095,Z-score,outflow_daily_average
+eus_L8qwooxABDqcjUFLJSfoW9,outflow_daily_average,last_365_days,-119915.3557,balance,amount,Daily average outflow,7.524278342818097,Z-score,outflow_daily_average

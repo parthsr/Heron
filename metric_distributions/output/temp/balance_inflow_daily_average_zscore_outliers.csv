@@ -1,0 +1,13 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_mpucMpMfq78bStinjgaq4U,inflow_daily_average,last_365_days,25589.242684931505,balance,amount,Daily average inflow,4.14743668655603,Z-score,inflow_daily_average
+eus_WQT7NNsuuuVkDmcy7Fqrf7,inflow_daily_average,last_365_days,62991.190136986304,balance,amount,Daily average inflow,10.805167125910778,Z-score,inflow_daily_average
+eus_iL2xiCohwqnH3cxBpwfL2S,inflow_daily_average,last_365_days,20192.09156164384,balance,amount,Daily average inflow,3.1867172650507234,Z-score,inflow_daily_average
+eus_YwAk8Usji2jfrtWji4QoDJ,inflow_daily_average,last_365_days,30418.298109589043,balance,amount,Daily average inflow,5.0070322820871755,Z-score,inflow_daily_average
+eus_C9xZHaxi9mVZDieFSGpHmi,inflow_daily_average,last_365_days,21035.790356164383,balance,amount,Daily average inflow,3.3368997964049227,Z-score,inflow_daily_average
+eus_9pmSnzKF6NvnUxZhQu7ofE,inflow_daily_average,last_365_days,20941.137506849314,balance,amount,Daily average inflow,3.3200511241034496,Z-score,inflow_daily_average
+eus_8UYcJTaxNfpB7FgtLLGKGJ,inflow_daily_average,last_365_days,28308.70109589041,balance,amount,Daily average inflow,4.6315136471049305,Z-score,inflow_daily_average
+eus_hbsjSU9X3ycgJ9NnUKWFCt,inflow_daily_average,last_365_days,28063.809150684927,balance,amount,Daily average inflow,4.587921677461175,Z-score,inflow_daily_average
+eus_5DQGx45M3qVWgaKhBgAFzB,inflow_daily_average,last_365_days,24547.65789041096,balance,amount,Daily average inflow,3.962029474791512,Z-score,inflow_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,inflow_daily_average,last_365_days,52905.570931506845,balance,amount,Daily average inflow,9.009877346678373,Z-score,inflow_daily_average
+eus_bdPUwVi9QXk5f56Ap5dky4,inflow_daily_average,last_365_days,32020.606301369862,balance,amount,Daily average inflow,5.292251013954586,Z-score,inflow_daily_average
+eus_L8qwooxABDqcjUFLJSfoW9,inflow_daily_average,last_365_days,113942.78841095892,balance,amount,Daily average inflow,19.874801994449314,Z-score,inflow_daily_average

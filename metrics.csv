@@ -1,70 +1,70 @@
-metric_group,metric_label,metric_description,metric_unit,Range min,Range Max,Actual min
-balance,inflow_growth_rate,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,ratio,-1,,
-balance,inflow_daily_average,Daily average inflow,amount,,,
-balance,outflow_daily_average,Daily average outflow,amount,,,
-balance,latest_balance,Latest balance across accounts,amount,,,
-balance,balance_minimum,Minimum balance,amount,,,
-balance,balance_average,Average balance,amount,,,
-balance,change_in_balance,Absolute difference in balance,amount,,,
-balance,weekday_balance_average,Average weekday balance,amount,,,
-balance,weekday_with_highest_avg,"Weekday balance with highest average balance. 0 is Monday, 6 is Sunday",weekday,,,
-balance,weekday_with_lowest_avg,"Weekday balance with lowest average balance. 0 is Monday, 6 is Sunday",weekday,,,
-data_quality,data_volume,The number of unique transactions with timestamps,n,,,
-data_quality,date_range,The number of days between earliest and latest transaction,day,,,
-data_quality,data_freshness,The number of days since last transaction,day,,,
-data_quality,has_balance_ratio,The ratio of transactions with a balance and account id value,ratio,,,
-data_quality,data_coverage,The ratio of days where a transaction took place,ratio,,,
-data_quality,accounts,The number of unique account_id,n,,,
-data_quality,potentially_duplicated_account_pairs,The number of account pairs that have overlapping dates and either same last 4 digits of account number or matching account numbers / names,n,,,
-data_quality,inflows,The number of inflows (Transaction.amount > 0),n,,,
-data_quality,outflows,The number of outflows (Transaction.amount < 0),n,,,
-data_quality,inflow_amount,The amount in inflow transactions (Transaction.amount > 0),amount,,,
-data_quality,confidence,"The overall confidence score for the company, based on label confidence and method",ratio,,,
-data_quality,revenue_anomalies,The count of revenue anomalies,n,,,
-debt,last_debt_investment,"Amount of last debt investment, null if not applicable",amount,,,
-debt,last_debt_investment_days,"Days since last debt investment, null if not applicable",day,,,
-debt,debt_repayment_daily_average,Average debt repayment (per day),amount,,,
-debt,debt_investment,Total debt investment,amount,,,
-debt,debt_investors,Count of debt investors,n,,,
-debt,debt_investment_count,Number of debt investments,n,,,
-debt,debt_repayment,Total debt repayment,amount,,,
-debt,debt_service_coverage_ratio,Net income / Debt repayment; how many times can debt be repaid,ratio,,,
-heron,merchant_heron_ids,The merchant heron ids,array,,,
-heron,predicted_nsf_fees,"The likelihood that the company will incur 1 or more NSF fees, based on current scorecard metrics",probability,,,
-heron,predicted_balance_daily_average,The predicted daily average balance,amount,,,
-heron,heron_score,"The likelihood that the company will default, based on current scorecard metrics",n,,,
-processing_quality,category_coverage,The ratio of transactions that have a category label,ratio,,,
-processing_quality,merchant_coverage,The ratio of transactions that have a merchant label,ratio,,,
-processing_quality,unconnected_account_ratio,The total amount value of intra-company accounts normalised by total amount of revenue,ratio,,,
-profit_and_loss,revenue_daily_average,Average revenue (per day) across transactions with categories in the 'revenue' analytics group,amount,,,
-profit_and_loss,cogs_daily_average,Average cogs (per day) for transactions with categories in the 'cost of goods sold' analytics group`,amount,,,
-profit_and_loss,opex_daily_average,Average opex (per day) for transactions with categories in the 'operational expenses' analytics group,amount,,,
-profit_and_loss,revenue_sources,Count of distinct merchants with categories in the 'revenue' analytics group,n,,,
-profit_and_loss,revenue,All transactions associated to categories in the 'revenue' analytics group,amount,,,
-profit_and_loss,annualized_revenue,The annualized amount for all transactions with categories in the 'revenue' analytics group,amount,,,
-profit_and_loss,cogs,The total amount from all transactions with categories in the 'cost of goods sold' analytics group,amount,,,
-profit_and_loss,average_credit_card_spend,Average credit card spend for the last X full calendar months,amount,,,
-profit_and_loss,opex,The total amount from transactions with categories in the 'operational expenses' analytics group,amount,,,
-profit_and_loss,revenue_profit_and_loss,Total revenue from P&L view,amount,,,
-profit_and_loss,annualized_revenue_profit_and_loss,the daily average revenue for the date range multiplied by 365 from P&L view,amount,,,
-profit_and_loss,cogs_profit_and_loss,Total COGS from P&L view,amount,,,
-profit_and_loss,opex_profit_and_loss,Total Opex from P&L view,amount,,,
-profit_and_loss,revenue_monthly_average,Average monthly revenue for the last X full calendar months across transactions with categories in the 'revenue' analytics group,amount,,,
-profit_and_loss,revenue_growth_rate,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,ratio,,,
-profit_and_loss,gross_operating_cashflow_daily_average,Average daily gross operating cashflow,amount,,,
-profit_and_loss,net_operating_cashflow_daily_average,"Average daily net operating cashflow, taking revenue_daily_average - cogs_daily_average - opex_daily_average",amount,,,
-profit_and_loss,gross_operating_cashflow,Total gross operating cashflow,amount,,,
-profit_and_loss,net_operating_cashflow,Total net operating cashflow,amount,,,
-profit_and_loss,gross_operating_cashflow_profit_and_loss,Total gross operating cashflow from P&L view,amount,,,
-profit_and_loss,net_operating_cashflow_profit_and_loss,Total net operating cashflow from P&L view,amount,,,
-risk_flag,deposit_days,Total distinct days where a deposit occurred,day,,,
-risk_flag,nsf_fees,Total count NSF transactions,n,,,
-risk_flag,nsf_days,Total distinct days where an NSF transaction occurred,day,,,
-risk_flag,debt_collection,Total amount from debt collection agency transactions,amount,,,
-risk_flag,atm_withdrawals,Total amount from atm withdrawal transactions,amount,,,
-risk_flag,tax_payments,Total count of tax payments,n,,,
-risk_flag,tax_payment_amount,Total amount of tax payments (categories assigned to 'tax_expenses' analytics group),amount,,,
-risk_flag,negative_balance_days,Total number of days where the balance was less than 0,day,,,
-risk_flag,negative_balance_days_by_account,Total number of account / day pairs where the ending balance was less than 0 for that account / day,day,,,
-heron,distinct_mcas_from_outflows,The number of distinct MCAs extracted from outflow transactions,n,,,
-heron,distinct_mcas_from_inflows,The number of distinct MCAs extracted from inflow transactions,n,,,
+metric_group,metric_label,metric_description,metric_unit
+balance,inflow_growth_rate,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,ratio
+balance,inflow_daily_average,Daily average inflow,amount
+balance,outflow_daily_average,Daily average outflow,amount
+balance,latest_balance,Latest balance across accounts,amount
+balance,balance_minimum,Minimum balance,amount
+balance,balance_average,Average balance,amount
+balance,change_in_balance,Absolute difference in balance,amount
+balance,weekday_balance_average,Average weekday balance,amount
+balance,weekday_with_highest_avg,"Weekday balance with highest average balance. 0 is Monday, 6 is Sunday",weekday
+balance,weekday_with_lowest_avg,"Weekday balance with lowest average balance. 0 is Monday, 6 is Sunday",weekday
+data_quality,data_volume,The number of unique transactions with timestamps,n
+data_quality,date_range,The number of days between earliest and latest transaction,day
+data_quality,data_freshness,The number of days since last transaction,day
+data_quality,has_balance_ratio,The ratio of transactions with a balance and account id value,ratio
+data_quality,data_coverage,The ratio of days where a transaction took place,ratio
+data_quality,accounts,The number of unique account_id,n
+data_quality,potentially_duplicated_account_pairs,The number of account pairs that have overlapping dates and either same last 4 digits of account number or matching account numbers / names,n
+data_quality,inflows,The number of inflows (Transaction.amount > 0),n
+data_quality,outflows,The number of outflows (Transaction.amount < 0),n
+data_quality,inflow_amount,The amount in inflow transactions (Transaction.amount > 0),amount
+data_quality,confidence,"The overall confidence score for the company, based on label confidence and method",ratio
+data_quality,revenue_anomalies,The count of revenue anomalies,n
+debt,last_debt_investment,"Amount of last debt investment, null if not applicable",amount
+debt,last_debt_investment_days,"Days since last debt investment, null if not applicable",day
+debt,debt_repayment_daily_average,Average debt repayment (per day),amount
+debt,debt_investment,Total debt investment,amount
+debt,debt_investors,Count of debt investors,n
+debt,debt_investment_count,Number of debt investments,n
+debt,debt_repayment,Total debt repayment,amount
+debt,debt_service_coverage_ratio,Net income / Debt repayment; how many times can debt be repaid,ratio
+heron,merchant_heron_ids,The merchant heron ids,array
+heron,predicted_nsf_fees,"The likelihood that the company will incur 1 or more NSF fees, based on current scorecard metrics",probability
+heron,predicted_balance_daily_average,The predicted daily average balance,amount
+heron,heron_score,"The likelihood that the company will default, based on current scorecard metrics",n
+processing_quality,category_coverage,The ratio of transactions that have a category label,ratio
+processing_quality,merchant_coverage,The ratio of transactions that have a merchant label,ratio
+processing_quality,unconnected_account_ratio,The total amount value of intra-company accounts normalised by total amount of revenue,ratio
+profit_and_loss,revenue_daily_average,Average revenue (per day) across transactions with categories in the 'revenue' analytics group,amount
+profit_and_loss,cogs_daily_average,Average cogs (per day) for transactions with categories in the 'cost of goods sold' analytics group`,amount
+profit_and_loss,opex_daily_average,Average opex (per day) for transactions with categories in the 'operational expenses' analytics group,amount
+profit_and_loss,revenue_sources,Count of distinct merchants with categories in the 'revenue' analytics group,n
+profit_and_loss,revenue,All transactions associated to categories in the 'revenue' analytics group,amount
+profit_and_loss,annualized_revenue,The annualized amount for all transactions with categories in the 'revenue' analytics group,amount
+profit_and_loss,cogs,The total amount from all transactions with categories in the 'cost of goods sold' analytics group,amount
+profit_and_loss,average_credit_card_spend,Average credit card spend for the last X full calendar months,amount
+profit_and_loss,opex,The total amount from transactions with categories in the 'operational expenses' analytics group,amount
+profit_and_loss,revenue_profit_and_loss,Total revenue from P&L view,amount
+profit_and_loss,annualized_revenue_profit_and_loss,the daily average revenue for the date range multiplied by 365 from P&L view,amount
+profit_and_loss,cogs_profit_and_loss,Total COGS from P&L view,amount
+profit_and_loss,opex_profit_and_loss,Total Opex from P&L view,amount
+profit_and_loss,revenue_monthly_average,Average monthly revenue for the last X full calendar months across transactions with categories in the 'revenue' analytics group,amount
+profit_and_loss,revenue_growth_rate,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,ratio
+profit_and_loss,gross_operating_cashflow_daily_average,Average daily gross operating cashflow,amount
+profit_and_loss,net_operating_cashflow_daily_average,"Average daily net operating cashflow, taking revenue_daily_average - cogs_daily_average - opex_daily_average",amount
+profit_and_loss,gross_operating_cashflow,Total gross operating cashflow,amount
+profit_and_loss,net_operating_cashflow,Total net operating cashflow,amount
+profit_and_loss,gross_operating_cashflow_profit_and_loss,Total gross operating cashflow from P&L view,amount
+profit_and_loss,net_operating_cashflow_profit_and_loss,Total net operating cashflow from P&L view,amount
+risk_flag,deposit_days,Total distinct days where a deposit occurred,day
+risk_flag,nsf_fees,Total count NSF transactions,n
+risk_flag,nsf_days,Total distinct days where an NSF transaction occurred,day
+risk_flag,debt_collection,Total amount from debt collection agency transactions,amount
+risk_flag,atm_withdrawals,Total amount from atm withdrawal transactions,amount
+risk_flag,tax_payments,Total count of tax payments,n
+risk_flag,tax_payment_amount,Total amount of tax payments (categories assigned to 'tax_expenses' analytics group),amount
+risk_flag,negative_balance_days,Total number of days where the balance was less than 0,day
+risk_flag,negative_balance_days_by_account,Total number of account / day pairs where the ending balance was less than 0 for that account / day,day
+heron,distinct_mcas_from_outflows,The number of distinct MCAs extracted from outflow transactions,n
+heron,distinct_mcas_from_inflows,The number of distinct MCAs extracted from inflow transactions,n

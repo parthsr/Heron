@@ -1,0 +1,6 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_4rPHtTXZoXU8VrU5hwGCXL,confidence,latest,0.4972916981714335,data_quality,ratio,"The overall confidence score for the company, based on label confidence and method",3.553549664013751,Z-score,confidence
+eus_YNmEBVXESqWwDi2gKBPSr6,confidence,latest,0.4568811489611349,data_quality,ratio,"The overall confidence score for the company, based on label confidence and method",4.1030286206512345,Z-score,confidence
+eus_kRqLqdqyFhEfosCdCSYdCr,confidence,latest,0.4254486736906528,data_quality,ratio,"The overall confidence score for the company, based on label confidence and method",4.5304289914374944,Z-score,confidence
+eus_TuCRnTnB3YHCZ4ediHNufA,confidence,latest,0.526163654,data_quality,ratio,"The overall confidence score for the company, based on label confidence and method",3.160965735440932,Z-score,confidence
+eus_ZKJwYjivry8DhkooARubhn,confidence,latest,0.4713033305040809,data_quality,ratio,"The overall confidence score for the company, based on label confidence and method",3.90692425133386,Z-score,confidence

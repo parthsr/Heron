@@ -1,0 +1,7 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_Za2F6FxwCSpBo6oW69XP8w,has_balance_ratio,latest,0.1270358306188925,data_quality,ratio,The ratio of transactions with a balance and account id value,3.8385863397058344,Z-score,has_balance_ratio
+eus_BoshMCo7zeGgaxyxhsRivo,has_balance_ratio,latest,0.2368501529051987,data_quality,ratio,The ratio of transactions with a balance and account id value,3.2554134591489214,Z-score,has_balance_ratio
+eus_GgHoJDr9p9BZsr8M45DfxZ,has_balance_ratio,latest,0.1566771819137749,data_quality,ratio,The ratio of transactions with a balance and account id value,3.6811748850035224,Z-score,has_balance_ratio
+eus_YS8jYu8tiumEkUVrpKAGZh,has_balance_ratio,latest,0.252442102952475,data_quality,ratio,The ratio of transactions with a balance and account id value,3.172611851551117,Z-score,has_balance_ratio
+eus_4EPN6NSoTAQVQmg4yTz2G8,has_balance_ratio,latest,0.240761301,data_quality,ratio,The ratio of transactions with a balance and account id value,3.2346431675035086,Z-score,has_balance_ratio
+eus_ZjHAdcoFTWQESN6GxZkn8L,has_balance_ratio,latest,0.2651245551601423,data_quality,ratio,The ratio of transactions with a balance and account id value,3.10526123614425,Z-score,has_balance_ratio

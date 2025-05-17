@@ -1,0 +1,321 @@
+2025-05-17 13:00:11,752 - INFO - Starting correlation analysis...
+2025-05-17 13:00:11,752 - INFO - Starting data loading process...
+2025-05-17 13:00:11,753 - INFO - Loading metrics definitions from metrics.csv...
+2025-05-17 13:00:11,763 - INFO - Loaded 69 metric definitions
+2025-05-17 13:00:11,763 - INFO - Loading company metrics from company_metrics.csv...
+2025-05-17 13:00:12,014 - INFO - Loaded 207210 metric records
+2025-05-17 13:00:12,014 - INFO - Starting data preparation...
+2025-05-17 13:00:12,015 - INFO - Created mapping for 69 metrics
+2025-05-17 13:00:12,076 - INFO - Converting metric values to numeric and removing non-numeric values...
+2025-05-17 13:00:12,117 - INFO - Removed 0 non-numeric values
+2025-05-17 13:00:12,121 - INFO - Preparing data for correlation analysis...
+2025-05-17 13:00:12,165 - INFO - Found 14 common date ranges with sufficient data
+2025-05-17 13:00:12,166 - INFO - Processing date range: last_365_days
+2025-05-17 13:00:12,259 - INFO - Created pivot table with 28 metrics for last_365_days
+2025-05-17 13:00:12,260 - INFO - Processing date range: last_6_calendar_months
+2025-05-17 13:00:12,325 - INFO - Created pivot table with 23 metrics for last_6_calendar_months
+2025-05-17 13:00:12,326 - INFO - Processing date range: last_90_days
+2025-05-17 13:00:12,409 - INFO - Created pivot table with 23 metrics for last_90_days
+2025-05-17 13:00:12,409 - INFO - Processing date range: last_30_days
+2025-05-17 13:00:12,471 - INFO - Created pivot table with 20 metrics for last_30_days
+2025-05-17 13:00:12,471 - INFO - Processing date range: last_180_days
+2025-05-17 13:00:12,504 - INFO - Created pivot table with 20 metrics for last_180_days
+2025-05-17 13:00:12,504 - INFO - Processing date range: last_1_calendar_months
+2025-05-17 13:00:12,533 - INFO - Created pivot table with 18 metrics for last_1_calendar_months
+2025-05-17 13:00:12,534 - INFO - Processing date range: last_3_calendar_months
+2025-05-17 13:00:12,563 - INFO - Created pivot table with 18 metrics for last_3_calendar_months
+2025-05-17 13:00:12,564 - INFO - Processing date range: last_12_calendar_months
+2025-05-17 13:00:12,594 - INFO - Created pivot table with 18 metrics for last_12_calendar_months
+2025-05-17 13:00:12,594 - INFO - Processing date range: last_120_days
+2025-05-17 13:00:12,624 - INFO - Created pivot table with 19 metrics for last_120_days
+2025-05-17 13:00:12,624 - INFO - Processing date range: latest
+2025-05-17 13:00:12,669 - INFO - Created pivot table with 16 metrics for latest
+2025-05-17 13:00:12,669 - INFO - Processing date range: next_30_days
+2025-05-17 13:00:12,698 - INFO - Created pivot table with 4 metrics for next_30_days
+2025-05-17 13:00:12,699 - INFO - Processing date range: next_60_days
+2025-05-17 13:00:12,743 - INFO - Created pivot table with 4 metrics for next_60_days
+2025-05-17 13:00:12,743 - INFO - Processing date range: next_90_days
+2025-05-17 13:00:12,772 - INFO - Created pivot table with 4 metrics for next_90_days
+2025-05-17 13:00:12,772 - INFO - Processing date range: next_180_days
+2025-05-17 13:00:12,796 - INFO - Created pivot table with 2 metrics for next_180_days
+2025-05-17 13:00:12,796 - INFO - Starting correlation analysis...
+2025-05-17 13:00:12,797 - INFO - Found 7 metric groups to analyze
+2025-05-17 13:00:12,797 - INFO - Analyzing correlations for date range: last_365_days
+2025-05-17 13:00:12,799 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:12,803 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:14,025 - INFO - Identifying strong correlations...
+2025-05-17 13:00:14,045 - INFO - Found 8 strong correlations for last_365_days
+2025-05-17 13:00:14,046 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:14,049 - INFO - Found 5 correlations for group balance
+2025-05-17 13:00:14,050 - INFO - Generating correlation plot for balance_average and balance_minimum
+2025-05-17 13:00:14,329 - INFO - Generating correlation plot for opex_daily_average and outflow_daily_average
+2025-05-17 13:00:14,592 - INFO - Generating correlation plot for inflow_daily_average and revenue_daily_average
+2025-05-17 13:00:14,852 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and outflow_daily_average
+2025-05-17 13:00:15,101 - INFO - Generating correlation plot for cogs_daily_average and inflow_daily_average
+2025-05-17 13:00:15,367 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:15,368 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:15,368 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:15,369 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:15,369 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:15,369 - INFO - Found 6 correlations for group profit_and_loss
+2025-05-17 13:00:15,370 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and opex_daily_average
+2025-05-17 13:00:15,626 - INFO - Generating correlation plot for opex_daily_average and outflow_daily_average
+2025-05-17 13:00:15,877 - INFO - Generating correlation plot for inflow_daily_average and revenue_daily_average
+2025-05-17 13:00:16,143 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and outflow_daily_average
+2025-05-17 13:00:16,429 - INFO - Generating correlation plot for gross_operating_cashflow_daily_average and revenue_daily_average
+2025-05-17 13:00:16,692 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:16,692 - INFO - Found 1 correlations for group risk_flag
+2025-05-17 13:00:16,693 - INFO - Generating correlation plot for nsf_days and nsf_fees
+2025-05-17 13:00:16,947 - INFO - Analyzing correlations for date range: last_6_calendar_months
+2025-05-17 13:00:16,949 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:16,951 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:17,366 - INFO - Identifying strong correlations...
+2025-05-17 13:00:17,428 - INFO - Found 37 strong correlations for last_6_calendar_months
+2025-05-17 13:00:17,430 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:17,430 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:17,431 - INFO - Found 7 correlations for group data_quality
+2025-05-17 13:00:17,431 - INFO - Generating correlation plot for inflow_amount and revenue_monthly_average
+2025-05-17 13:00:17,699 - INFO - Generating correlation plot for inflow_amount and revenue_profit_and_loss
+2025-05-17 13:00:17,970 - INFO - Generating correlation plot for inflow_amount and revenue
+2025-05-17 13:00:18,246 - INFO - Generating correlation plot for annualized_revenue and inflow_amount
+2025-05-17 13:00:18,522 - INFO - Generating correlation plot for annualized_revenue_profit_and_loss and inflow_amount
+2025-05-17 13:00:18,795 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:18,796 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:18,797 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:18,797 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:18,798 - INFO - Found 37 correlations for group profit_and_loss
+2025-05-17 13:00:18,798 - INFO - Generating correlation plot for annualized_revenue and annualized_revenue_profit_and_loss
+2025-05-17 13:00:19,067 - INFO - Generating correlation plot for cogs and cogs_profit_and_loss
+2025-05-17 13:00:19,330 - INFO - Generating correlation plot for revenue and revenue_profit_and_loss
+2025-05-17 13:00:19,577 - INFO - Generating correlation plot for opex and opex_profit_and_loss
+2025-05-17 13:00:19,833 - INFO - Generating correlation plot for net_operating_cashflow and net_operating_cashflow_profit_and_loss
+2025-05-17 13:00:20,094 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:20,095 - INFO - Analyzing correlations for date range: last_90_days
+2025-05-17 13:00:20,096 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:20,098 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:20,505 - INFO - Identifying strong correlations...
+2025-05-17 13:00:20,522 - INFO - Found 8 strong correlations for last_90_days
+2025-05-17 13:00:20,523 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:20,524 - INFO - Found 3 correlations for group balance
+2025-05-17 13:00:20,524 - INFO - Generating correlation plot for balance_average and weekday_balance_average
+2025-05-17 13:00:20,772 - INFO - Generating correlation plot for balance_average and change_in_balance
+2025-05-17 13:00:21,076 - INFO - Generating correlation plot for change_in_balance and weekday_balance_average
+2025-05-17 13:00:21,372 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:21,375 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:21,376 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:21,376 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:21,377 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:21,377 - INFO - Found 3 correlations for group profit_and_loss
+2025-05-17 13:00:21,378 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and opex_daily_average
+2025-05-17 13:00:21,649 - INFO - Generating correlation plot for gross_operating_cashflow_daily_average and revenue_daily_average
+2025-05-17 13:00:21,900 - INFO - Generating correlation plot for cogs_daily_average and revenue_daily_average
+2025-05-17 13:00:22,153 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:22,153 - INFO - Found 2 correlations for group risk_flag
+2025-05-17 13:00:22,154 - INFO - Generating correlation plot for nsf_days and nsf_fees
+2025-05-17 13:00:22,396 - INFO - Generating correlation plot for negative_balance_days and negative_balance_days_by_account
+2025-05-17 13:00:22,654 - INFO - Analyzing correlations for date range: last_30_days
+2025-05-17 13:00:22,656 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:22,658 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:23,031 - INFO - Identifying strong correlations...
+2025-05-17 13:00:23,050 - INFO - Found 10 strong correlations for last_30_days
+2025-05-17 13:00:23,051 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:23,052 - INFO - Found 4 correlations for group balance
+2025-05-17 13:00:23,052 - INFO - Generating correlation plot for balance_minimum and change_in_balance
+2025-05-17 13:00:23,309 - INFO - Generating correlation plot for balance_average and debt_repayment_daily_average
+2025-05-17 13:00:23,561 - INFO - Generating correlation plot for balance_average and debt_investment
+2025-05-17 13:00:23,816 - INFO - Generating correlation plot for balance_average and opex_daily_average
+2025-05-17 13:00:24,066 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:24,067 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:24,067 - INFO - Found 3 correlations for group debt
+2025-05-17 13:00:24,068 - INFO - Generating correlation plot for balance_average and debt_repayment_daily_average
+2025-05-17 13:00:24,321 - INFO - Generating correlation plot for balance_average and debt_investment
+2025-05-17 13:00:24,580 - INFO - Generating correlation plot for debt_repayment_daily_average and opex_daily_average
+2025-05-17 13:00:24,835 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:24,836 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:24,836 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:24,837 - INFO - Found 5 correlations for group profit_and_loss
+2025-05-17 13:00:24,837 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and opex_daily_average
+2025-05-17 13:00:25,102 - INFO - Generating correlation plot for gross_operating_cashflow_daily_average and revenue_daily_average
+2025-05-17 13:00:25,358 - INFO - Generating correlation plot for cogs_daily_average and revenue_daily_average
+2025-05-17 13:00:25,618 - INFO - Generating correlation plot for debt_repayment_daily_average and opex_daily_average
+2025-05-17 13:00:25,879 - INFO - Generating correlation plot for balance_average and opex_daily_average
+2025-05-17 13:00:26,125 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:26,126 - INFO - Found 2 correlations for group risk_flag
+2025-05-17 13:00:26,127 - INFO - Generating correlation plot for nsf_days and nsf_fees
+2025-05-17 13:00:26,449 - INFO - Generating correlation plot for negative_balance_days and negative_balance_days_by_account
+2025-05-17 13:00:26,708 - INFO - Analyzing correlations for date range: last_180_days
+2025-05-17 13:00:26,710 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:26,711 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:27,075 - INFO - Identifying strong correlations...
+2025-05-17 13:00:27,086 - INFO - Found 5 strong correlations for last_180_days
+2025-05-17 13:00:27,087 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:27,087 - INFO - Found 1 correlations for group balance
+2025-05-17 13:00:27,088 - INFO - Generating correlation plot for balance_average and change_in_balance
+2025-05-17 13:00:27,353 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:27,354 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:27,354 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:27,355 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:27,355 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:27,356 - INFO - Found 2 correlations for group profit_and_loss
+2025-05-17 13:00:27,356 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and opex_daily_average
+2025-05-17 13:00:27,617 - INFO - Generating correlation plot for gross_operating_cashflow_daily_average and revenue_daily_average
+2025-05-17 13:00:27,870 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:27,871 - INFO - Found 2 correlations for group risk_flag
+2025-05-17 13:00:27,872 - INFO - Generating correlation plot for nsf_days and nsf_fees
+2025-05-17 13:00:28,124 - INFO - Generating correlation plot for negative_balance_days and negative_balance_days_by_account
+2025-05-17 13:00:28,379 - INFO - Analyzing correlations for date range: last_1_calendar_months
+2025-05-17 13:00:28,381 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:28,382 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:28,733 - INFO - Identifying strong correlations...
+2025-05-17 13:00:28,783 - INFO - Found 38 strong correlations for last_1_calendar_months
+2025-05-17 13:00:28,785 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:28,786 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:28,786 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:28,787 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:28,787 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:28,787 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:28,788 - INFO - Found 38 correlations for group profit_and_loss
+2025-05-17 13:00:28,789 - INFO - Generating correlation plot for annualized_revenue and annualized_revenue_profit_and_loss
+2025-05-17 13:00:29,042 - INFO - Generating correlation plot for gross_operating_cashflow and gross_operating_cashflow_profit_and_loss
+2025-05-17 13:00:29,289 - INFO - Generating correlation plot for net_operating_cashflow and net_operating_cashflow_profit_and_loss
+2025-05-17 13:00:29,538 - INFO - Generating correlation plot for opex and opex_profit_and_loss
+2025-05-17 13:00:29,791 - INFO - Generating correlation plot for revenue and revenue_monthly_average
+2025-05-17 13:00:30,036 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:30,037 - INFO - Analyzing correlations for date range: last_3_calendar_months
+2025-05-17 13:00:30,039 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:30,040 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:30,390 - INFO - Identifying strong correlations...
+2025-05-17 13:00:30,427 - INFO - Found 28 strong correlations for last_3_calendar_months
+2025-05-17 13:00:30,429 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:30,429 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:30,430 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:30,430 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:30,431 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:30,431 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:30,432 - INFO - Found 28 correlations for group profit_and_loss
+2025-05-17 13:00:30,432 - INFO - Generating correlation plot for revenue_monthly_average and revenue_profit_and_loss
+2025-05-17 13:00:30,694 - INFO - Generating correlation plot for gross_operating_cashflow and gross_operating_cashflow_profit_and_loss
+2025-05-17 13:00:30,952 - INFO - Generating correlation plot for net_operating_cashflow and net_operating_cashflow_profit_and_loss
+2025-05-17 13:00:31,249 - INFO - Generating correlation plot for opex and opex_profit_and_loss
+2025-05-17 13:00:31,498 - INFO - Generating correlation plot for annualized_revenue and annualized_revenue_profit_and_loss
+2025-05-17 13:00:31,770 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:31,771 - INFO - Analyzing correlations for date range: last_12_calendar_months
+2025-05-17 13:00:31,773 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:31,774 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:32,153 - INFO - Identifying strong correlations...
+2025-05-17 13:00:32,198 - INFO - Found 30 strong correlations for last_12_calendar_months
+2025-05-17 13:00:32,200 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:32,200 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:32,201 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:32,201 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:32,202 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:32,202 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:32,202 - INFO - Found 30 correlations for group profit_and_loss
+2025-05-17 13:00:32,203 - INFO - Generating correlation plot for revenue and revenue_monthly_average
+2025-05-17 13:00:32,493 - INFO - Generating correlation plot for annualized_revenue and revenue_monthly_average
+2025-05-17 13:00:32,770 - INFO - Generating correlation plot for annualized_revenue_profit_and_loss and revenue_monthly_average
+2025-05-17 13:00:33,033 - INFO - Generating correlation plot for revenue_monthly_average and revenue_profit_and_loss
+2025-05-17 13:00:33,295 - INFO - Generating correlation plot for annualized_revenue_profit_and_loss and revenue_profit_and_loss
+2025-05-17 13:00:33,559 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:33,560 - INFO - Analyzing correlations for date range: last_120_days
+2025-05-17 13:00:33,561 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:33,562 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:33,917 - INFO - Identifying strong correlations...
+2025-05-17 13:00:33,928 - INFO - Found 4 strong correlations for last_120_days
+2025-05-17 13:00:33,929 - INFO - Analyzing correlations for group: balance
+2025-05-17 13:00:33,929 - INFO - Analyzing correlations for group: data_quality
+2025-05-17 13:00:33,930 - INFO - Analyzing correlations for group: debt
+2025-05-17 13:00:33,930 - INFO - Analyzing correlations for group: heron
+2025-05-17 13:00:33,931 - INFO - Analyzing correlations for group: processing_quality
+2025-05-17 13:00:33,931 - INFO - Analyzing correlations for group: profit_and_loss
+2025-05-17 13:00:33,931 - INFO - Found 2 correlations for group profit_and_loss
+2025-05-17 13:00:33,932 - INFO - Generating correlation plot for net_operating_cashflow_daily_average and opex_daily_average
+2025-05-17 13:00:34,193 - INFO - Generating correlation plot for gross_operating_cashflow_daily_average and revenue_daily_average
+2025-05-17 13:00:34,447 - INFO - Analyzing correlations for group: risk_flag
+2025-05-17 13:00:34,448 - INFO - Found 2 correlations for group risk_flag
+2025-05-17 13:00:34,448 - INFO - Generating correlation plot for nsf_days and nsf_fees
+2025-05-17 13:00:34,699 - INFO - Generating correlation plot for negative_balance_days and negative_balance_days_by_account
+2025-05-17 13:00:34,960 - INFO - Analyzing correlations for date range: latest
+2025-05-17 13:00:34,961 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:34,962 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:35,279 - INFO - Identifying strong correlations...
+2025-05-17 13:00:35,282 - INFO - Found 0 strong correlations for latest
+2025-05-17 13:00:35,282 - INFO - Analyzing correlations for date range: next_30_days
+2025-05-17 13:00:35,283 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:35,283 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:35,490 - INFO - Identifying strong correlations...
+2025-05-17 13:00:35,491 - INFO - Found 0 strong correlations for next_30_days
+2025-05-17 13:00:35,491 - INFO - Analyzing correlations for date range: next_60_days
+2025-05-17 13:00:35,492 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:35,492 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:35,746 - INFO - Identifying strong correlations...
+2025-05-17 13:00:35,747 - INFO - Found 0 strong correlations for next_60_days
+2025-05-17 13:00:35,747 - INFO - Analyzing correlations for date range: next_90_days
+2025-05-17 13:00:35,748 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:35,748 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:35,959 - INFO - Identifying strong correlations...
+2025-05-17 13:00:35,960 - INFO - Found 0 strong correlations for next_90_days
+2025-05-17 13:00:35,960 - INFO - Analyzing correlations for date range: next_180_days
+2025-05-17 13:00:35,960 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:35,961 - INFO - Generating correlation matrix heatmap...
+2025-05-17 13:00:36,132 - INFO - Identifying strong correlations...
+2025-05-17 13:00:36,134 - INFO - Found 0 strong correlations for next_180_days
+2025-05-17 13:00:36,135 - INFO - Generating summary of top correlations across all date ranges
+2025-05-17 13:00:36,137 - INFO - Starting metric group correlation analysis...
+2025-05-17 13:00:36,137 - INFO - Analyzing group correlations for date range: last_365_days
+2025-05-17 13:00:36,137 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:36,140 - INFO - Found 7 metric groups for correlation analysis
+2025-05-17 13:00:36,154 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:36,377 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:36,378 - INFO - Analyzing group correlations for date range: last_6_calendar_months
+2025-05-17 13:00:36,378 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:36,380 - INFO - Found 5 metric groups for correlation analysis
+2025-05-17 13:00:36,387 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:36,580 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:36,580 - INFO - Analyzing group correlations for date range: last_90_days
+2025-05-17 13:00:36,580 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:36,582 - INFO - Found 6 metric groups for correlation analysis
+2025-05-17 13:00:36,590 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:36,787 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:36,788 - INFO - Analyzing group correlations for date range: last_30_days
+2025-05-17 13:00:36,788 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:36,789 - INFO - Found 6 metric groups for correlation analysis
+2025-05-17 13:00:36,796 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:36,996 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:36,996 - INFO - Analyzing group correlations for date range: last_180_days
+2025-05-17 13:00:36,996 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:36,997 - INFO - Found 6 metric groups for correlation analysis
+2025-05-17 13:00:37,004 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:37,202 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:37,203 - INFO - Analyzing group correlations for date range: last_1_calendar_months
+2025-05-17 13:00:37,203 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:37,204 - INFO - Found 4 metric groups for correlation analysis
+2025-05-17 13:00:37,210 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:37,379 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:37,379 - INFO - Analyzing group correlations for date range: last_3_calendar_months
+2025-05-17 13:00:37,379 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:37,381 - INFO - Found 4 metric groups for correlation analysis
+2025-05-17 13:00:37,386 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:37,555 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:37,556 - INFO - Analyzing group correlations for date range: last_12_calendar_months
+2025-05-17 13:00:37,556 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:37,557 - INFO - Found 4 metric groups for correlation analysis
+2025-05-17 13:00:37,562 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:37,735 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:37,735 - INFO - Analyzing group correlations for date range: last_120_days
+2025-05-17 13:00:37,735 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:37,736 - INFO - Found 6 metric groups for correlation analysis
+2025-05-17 13:00:37,743 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:37,942 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:37,943 - INFO - Analyzing group correlations for date range: latest
+2025-05-17 13:00:37,943 - INFO - Calculating correlation matrix...
+2025-05-17 13:00:37,944 - INFO - Found 5 metric groups for correlation analysis
+2025-05-17 13:00:37,949 - INFO - Generating group correlation heatmap...
+2025-05-17 13:00:38,189 - INFO - Identifying strong group correlations...
+2025-05-17 13:00:38,189 - WARNING - Skipping next_30_days due to insufficient metrics: 4
+2025-05-17 13:00:38,189 - WARNING - Skipping next_60_days due to insufficient metrics: 4
+2025-05-17 13:00:38,189 - WARNING - Skipping next_90_days due to insufficient metrics: 4
+2025-05-17 13:00:38,189 - WARNING - Skipping next_180_days due to insufficient metrics: 2
+2025-05-17 13:00:38,189 - INFO - Generating correlation analysis report...
+2025-05-17 13:00:38,190 - INFO - Correlation analysis report generated successfully
+2025-05-17 13:00:38,190 - INFO - Correlation analysis complete. Check report in metric_distributions/output/reports and plots in metric_distributions/output/plots/correlations

@@ -1,0 +1,24 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_iDeP6fiwAqNAzhtu22dKyR,debt_repayment_daily_average,last_120_days,5932.8385,debt,amount,Average debt repayment (per day),3.2678409373319166,Z-score,debt_repayment_daily_average
+eus_iDeP6fiwAqNAzhtu22dKyR,debt_repayment_daily_average,last_180_days,7959.031777777777,debt,amount,Average debt repayment (per day),4.417549686441482,Z-score,debt_repayment_daily_average
+eus_iDeP6fiwAqNAzhtu22dKyR,debt_repayment_daily_average,last_365_days,7993.458932,debt,amount,Average debt repayment (per day),4.437084446945496,Z-score,debt_repayment_daily_average
+eus_C9xZHaxi9mVZDieFSGpHmi,debt_repayment_daily_average,last_365_days,5917.894027,debt,amount,Average debt repayment (per day),3.259361099032495,Z-score,debt_repayment_daily_average
+eus_8UYcJTaxNfpB7FgtLLGKGJ,debt_repayment_daily_average,last_30_days,11036.253333333334,debt,amount,Average debt repayment (per day),6.1636360959527,Z-score,debt_repayment_daily_average
+eus_8UYcJTaxNfpB7FgtLLGKGJ,debt_repayment_daily_average,last_90_days,9581.151111,debt,amount,Average debt repayment (per day),5.337977569585362,Z-score,debt_repayment_daily_average
+eus_8UYcJTaxNfpB7FgtLLGKGJ,debt_repayment_daily_average,last_120_days,9828.691583333331,debt,amount,Average debt repayment (per day),5.478437736895995,Z-score,debt_repayment_daily_average
+eus_8UYcJTaxNfpB7FgtLLGKGJ,debt_repayment_daily_average,last_180_days,9406.344,debt,amount,Average debt repayment (per day),5.23878798726492,Z-score,debt_repayment_daily_average
+eus_8UYcJTaxNfpB7FgtLLGKGJ,debt_repayment_daily_average,last_365_days,9496.767315068493,debt,amount,Average debt repayment (per day),5.290096259579275,Z-score,debt_repayment_daily_average
+eus_NS2eL9iULiTQbcf9zpGDJg,debt_repayment_daily_average,last_30_days,12120.242333333334,debt,amount,Average debt repayment (per day),6.778716429555116,Z-score,debt_repayment_daily_average
+eus_NS2eL9iULiTQbcf9zpGDJg,debt_repayment_daily_average,last_90_days,12719.737888888889,debt,amount,Average debt repayment (per day),7.118884020097342,Z-score,debt_repayment_daily_average
+eus_NS2eL9iULiTQbcf9zpGDJg,debt_repayment_daily_average,last_120_days,12761.331583333333,debt,amount,Average debt repayment (per day),7.142485240639843,Z-score,debt_repayment_daily_average
+eus_NS2eL9iULiTQbcf9zpGDJg,debt_repayment_daily_average,last_180_days,12560.016666666666,debt,amount,Average debt repayment (per day),7.028254518646838,Z-score,debt_repayment_daily_average
+eus_NS2eL9iULiTQbcf9zpGDJg,debt_repayment_daily_average,last_365_days,11652.351095890412,debt,amount,Average debt repayment (per day),6.513224161260844,Z-score,debt_repayment_daily_average
+eus_hbsjSU9X3ycgJ9NnUKWFCt,debt_repayment_daily_average,last_30_days,10289.011666666667,debt,amount,Average debt repayment (per day),5.739633957909825,Z-score,debt_repayment_daily_average
+eus_hbsjSU9X3ycgJ9NnUKWFCt,debt_repayment_daily_average,last_90_days,7414.297333333333,debt,amount,Average debt repayment (per day),4.108454812034439,Z-score,debt_repayment_daily_average
+eus_hbsjSU9X3ycgJ9NnUKWFCt,debt_repayment_daily_average,last_120_days,5597.002416666665,debt,amount,Average debt repayment (per day),3.0772798060174877,Z-score,debt_repayment_daily_average
+eus_hbsjSU9X3ycgJ9NnUKWFCt,debt_repayment_daily_average,last_180_days,5506.112666666666,debt,amount,Average debt repayment (per day),3.0257068677763805,Z-score,debt_repayment_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,debt_repayment_daily_average,last_30_days,103485.766,debt,amount,Average debt repayment (per day),58.62161961090913,Z-score,debt_repayment_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,debt_repayment_daily_average,last_90_days,35756.674,debt,amount,Average debt repayment (per day),20.190572338336516,Z-score,debt_repayment_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,debt_repayment_daily_average,last_120_days,27452.914,debt,amount,Average debt repayment (per day),15.4788275965039,Z-score,debt_repayment_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,debt_repayment_daily_average,last_180_days,20315.13133333333,debt,amount,Average debt repayment (per day),11.428685257610352,Z-score,debt_repayment_daily_average
+eus_4C4mJ7cAbSFhHGkpo4dYs4,debt_repayment_daily_average,last_365_days,14291.074328767125,debt,amount,Average debt repayment (per day),8.010496519524862,Z-score,debt_repayment_daily_average

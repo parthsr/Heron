@@ -1,0 +1,8 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_WQT7NNsuuuVkDmcy7Fqrf7,latest_balance,latest,4182776.16,balance,amount,Latest balance across accounts,6.375663622679139,Z-score,latest_balance
+eus_MuEwbUdTRUZH5AbunkHgGZ,latest_balance,latest,3690977.29,balance,amount,Latest balance across accounts,5.606812837404837,Z-score,latest_balance
+eus_ehZ4PeZQSyHNbYUGmcwYJG,latest_balance,latest,2226559.92,balance,amount,Latest balance across accounts,3.3174248099499786,Z-score,latest_balance
+eus_KMmwVuRAp2ZQsb6PxfKkR5,latest_balance,latest,2233480.27,balance,amount,Latest balance across accounts,3.3282436972155653,Z-score,latest_balance
+eus_X8Hs3ftrq6fdS3sZvUNzcv,latest_balance,latest,3277751.28,balance,amount,Latest balance across accounts,4.96079845700525,Z-score,latest_balance
+eus_4C4mJ7cAbSFhHGkpo4dYs4,latest_balance,latest,18134946.17,balance,amount,Latest balance across accounts,28.187704118967932,Z-score,latest_balance
+eus_L8qwooxABDqcjUFLJSfoW9,latest_balance,latest,2688430.7,balance,amount,Latest balance across accounts,4.039487696955503,Z-score,latest_balance

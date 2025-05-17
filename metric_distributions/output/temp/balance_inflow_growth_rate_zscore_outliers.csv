@@ -1,0 +1,5 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_St2kZZ8r4i2bku66N3L3ia,inflow_growth_rate,last_6_calendar_months,20.403654061159266,balance,ratio,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,4.695642795968828,Z-score,inflow_growth_rate
+eus_iUorBzmHFzYy6M3ri9tacu,inflow_growth_rate,last_6_calendar_months,22.97502788506743,balance,ratio,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,5.2986295387632945,Z-score,inflow_growth_rate
+eus_JA7VcjZThGYvVFHGm3vL6F,inflow_growth_rate,last_6_calendar_months,125.8925997360674,balance,ratio,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,29.43278337114136,Z-score,inflow_growth_rate
+eus_huHEC8B7tuot986VQKnNKs,inflow_growth_rate,last_6_calendar_months,21.16584472,balance,ratio,The growth of in average monthly inflow amounts between 1st half and 2nd half of the time period,4.874376381295687,Z-score,inflow_growth_rate

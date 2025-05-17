@@ -1,0 +1,9 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_MuEwbUdTRUZH5AbunkHgGZ,revenue_anomalies,latest,48.0,data_quality,n,The count of revenue anomalies,17.875580335746072,Z-score,revenue_anomalies
+eus_NrkjH9wkXoCsKpGv8zibyP,revenue_anomalies,latest,23.0,data_quality,n,The count of revenue anomalies,8.419002296648124,Z-score,revenue_anomalies
+eus_e4aJCzEiZZVrjxMUxhw5rB,revenue_anomalies,latest,22.0,data_quality,n,The count of revenue anomalies,8.040739175084205,Z-score,revenue_anomalies
+eus_Ytu2yn8yRJvujNbRbfctvq,revenue_anomalies,latest,20.0,data_quality,n,The count of revenue anomalies,7.284212931956369,Z-score,revenue_anomalies
+eus_B4CKBwb4hCLbVXbVVZXnSN,revenue_anomalies,latest,12.0,data_quality,n,The count of revenue anomalies,4.258107959445025,Z-score,revenue_anomalies
+eus_8QFDn7qBVp5GgHQdkeH4Ub,revenue_anomalies,latest,12.0,data_quality,n,The count of revenue anomalies,4.258107959445025,Z-score,revenue_anomalies
+eus_7DuThxadz3Dh4TcmQ8E3Z6,revenue_anomalies,latest,27.0,data_quality,n,The count of revenue anomalies,9.932054782903796,Z-score,revenue_anomalies
+eus_L8qwooxABDqcjUFLJSfoW9,revenue_anomalies,latest,33.0,data_quality,n,The count of revenue anomalies,12.201633512287302,Z-score,revenue_anomalies

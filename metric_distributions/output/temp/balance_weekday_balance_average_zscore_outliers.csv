@@ -1,0 +1,2 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_USdpgqaWvmNVzm5wKPQDwf,weekday_balance_average,last_90_days,793192521.0,balance,amount,Average weekday balance,31.5725614275375,Z-score,weekday_balance_average

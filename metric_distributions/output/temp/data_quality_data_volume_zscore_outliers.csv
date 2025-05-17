@@ -1,0 +1,15 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_WQT7NNsuuuVkDmcy7Fqrf7,data_volume,latest,25779.0,data_quality,n,The number of unique transactions with timestamps,3.675608935432906,Z-score,data_volume
+eus_JBxecVXUwREEvvNRGfJqhP,data_volume,latest,22351.0,data_quality,n,The number of unique transactions with timestamps,3.0717477844012824,Z-score,data_volume
+eus_iDeP6fiwAqNAzhtu22dKyR,data_volume,latest,45994.0,data_quality,n,The number of unique transactions with timestamps,7.236592940130768,Z-score,data_volume
+eus_C9xZHaxi9mVZDieFSGpHmi,data_volume,latest,30498.0,data_quality,n,The number of unique transactions with timestamps,4.506886873507069,Z-score,data_volume
+eus_e4aJCzEiZZVrjxMUxhw5rB,data_volume,latest,82380.0,data_quality,n,The number of unique transactions with timestamps,13.646187993058613,Z-score,data_volume
+eus_j4LuMwkRrGNVeMBS5sMHNj,data_volume,latest,22775.0,data_quality,n,The number of unique transactions with timestamps,3.14643772840286,Z-score,data_volume
+eus_o97QcMeXVmRWaRgSy2bZKo,data_volume,latest,27075.0,data_quality,n,The number of unique transactions with timestamps,3.9039065001169737,Z-score,data_volume
+eus_iCig7BfB9JS3Ff3HcPHgcv,data_volume,latest,22581.0,data_quality,n,The number of unique transactions with timestamps,3.1122635559115723,Z-score,data_volume
+eus_6wGjKWST5mXPTFtRbqsNfA,data_volume,latest,25934.0,data_quality,n,The number of unique transactions with timestamps,3.702913042320275,Z-score,data_volume
+eus_WpaW66fXUg5zUXFsk8URJV,data_volume,latest,23590.0,data_quality,n,The number of unique transactions with timestamps,3.2900044839719302,Z-score,data_volume
+eus_RtV2DZscCJ2dW8j7padMZ8,data_volume,latest,23686.0,data_quality,n,The number of unique transactions with timestamps,3.3069154146892688,Z-score,data_volume
+eus_5DQGx45M3qVWgaKhBgAFzB,data_volume,latest,68728.0,data_quality,n,The number of unique transactions with timestamps,11.241312720630456,Z-score,data_volume
+eus_mXrfgs6FFLtgeYckTHBoGQ,data_volume,latest,39617.0,data_quality,n,The number of unique transactions with timestamps,6.113249136125907,Z-score,data_volume
+eus_L8qwooxABDqcjUFLJSfoW9,data_volume,latest,39698.0,data_quality,n,The number of unique transactions with timestamps,6.127517733918661,Z-score,data_volume

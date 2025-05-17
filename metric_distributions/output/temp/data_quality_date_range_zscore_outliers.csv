@@ -1,0 +1,27 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_D79MmSN48CdtZEEtthKrm3,date_range,latest,4569.0,data_quality,day,The number of days between earliest and latest transaction,4.3766843671824445,Z-score,date_range
+eus_4dheJbnAJWtPvL3gk9XQek,date_range,latest,4664.0,data_quality,day,The number of days between earliest and latest transaction,4.522973806548716,Z-score,date_range
+eus_7nzoTu9g5Bk4ZotjUmH7nY,date_range,latest,4356.0,data_quality,day,The number of days between earliest and latest transaction,4.048688045234909,Z-score,date_range
+eus_iVqtyJ7nFCRubW9xrDCShZ,date_range,latest,4619.0,data_quality,day,The number of days between earliest and latest transaction,4.453678808954167,Z-score,date_range
+eus_QhtxQjWocHexChjU9mYJme,date_range,latest,3701.0,data_quality,day,The number of days between earliest and latest transaction,3.040060858025352,Z-score,date_range
+eus_e4aJCzEiZZVrjxMUxhw5rB,date_range,latest,3784.0,data_quality,day,The number of days between earliest and latest transaction,3.16787163136641,Z-score,date_range
+eus_XTcxLFF7DPb48gjq5mpBju,date_range,latest,4568.0,data_quality,day,The number of days between earliest and latest transaction,4.37514447834701,Z-score,date_range
+eus_R8kDHNEJaff4GQNvEEehAG,date_range,latest,4527.0,data_quality,day,The number of days between earliest and latest transaction,4.3120090360941985,Z-score,date_range
+eus_m2t5Gvg5UWsxpcA9NMXYRJ,date_range,latest,4195.0,data_quality,day,The number of days between earliest and latest transaction,3.8007659427299645,Z-score,date_range
+eus_XSiHodGqy2Hq9xGDKmZrdB,date_range,latest,4396.0,data_quality,day,The number of days between earliest and latest transaction,4.110283598652287,Z-score,date_range
+eus_RNFRcGrWEwBPQrn7xy3qvs,date_range,latest,4478.0,data_quality,day,The number of days between earliest and latest transaction,4.236554483157911,Z-score,date_range
+eus_2UhTRNdHgdSeydcpJGsxpw,date_range,latest,4457.0,data_quality,day,The number of days between earliest and latest transaction,4.204216817613787,Z-score,date_range
+eus_Yi7DNhsN3CmfgF89hajrrw,date_range,latest,4599.0,data_quality,day,The number of days between earliest and latest transaction,4.422881032245478,Z-score,date_range
+eus_FKj3ofUbf6YvtdGnBoa4ys,date_range,latest,4150.0,data_quality,day,The number of days between earliest and latest transaction,3.7314709451354147,Z-score,date_range
+eus_B2JK2yScYduJasr35vnkQJ,date_range,latest,4208.0,data_quality,day,The number of days between earliest and latest transaction,3.8207844975906124,Z-score,date_range
+eus_JMoMD34JF2n3aiQxWDjR6b,date_range,latest,4593.0,data_quality,day,The number of days between earliest and latest transaction,4.413641699232871,Z-score,date_range
+eus_82LVkuRRwTdDxgyM6Cf3HX,date_range,latest,4631.0,data_quality,day,The number of days between earliest and latest transaction,4.4721574749793795,Z-score,date_range
+eus_m8SVB544QuvW4xbyLFdvrR,date_range,latest,3746.0,data_quality,day,The number of days between earliest and latest transaction,3.1093558556199015,Z-score,date_range
+eus_L4NZawNGAiz3ZnAgZvPRXu,date_range,latest,4362.0,data_quality,day,The number of days between earliest and latest transaction,4.057927378247515,Z-score,date_range
+eus_6M8c45tf2JLLVNnznf8qnd,date_range,latest,3788.0,data_quality,day,The number of days between earliest and latest transaction,3.174031186708148,Z-score,date_range
+eus_8QFDn7qBVp5GgHQdkeH4Ub,date_range,latest,4079.0,data_quality,day,The number of days between earliest and latest transaction,3.62213883781957,Z-score,date_range
+eus_YFxhgD5DXWhXX2LLYgjdLq,date_range,latest,4493.0,data_quality,day,The number of days between earliest and latest transaction,4.259652815689427,Z-score,date_range
+eus_4ay5H6Eu74VhdaL3TmN3vW,date_range,latest,4541.0,data_quality,day,The number of days between earliest and latest transaction,4.33356747979028,Z-score,date_range
+eus_eefoWHopEJ85UqMKb4qmm3,date_range,latest,4554.0,data_quality,day,The number of days between earliest and latest transaction,4.353586034650928,Z-score,date_range
+eus_kpeoR2sqGhBYgCyoeQbRWk,date_range,latest,4178.0,data_quality,day,The number of days between earliest and latest transaction,3.7745878325275792,Z-score,date_range
+eus_a5ZeGXrzPStHbjNJcmFRVF,date_range,latest,4622.0,data_quality,day,The number of days between earliest and latest transaction,4.458298475460469,Z-score,date_range

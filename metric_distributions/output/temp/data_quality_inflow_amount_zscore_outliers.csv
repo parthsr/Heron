@@ -1,0 +1,12 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_mpucMpMfq78bStinjgaq4U,inflow_amount,last_6_calendar_months,4932323.08,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),4.278598301505107,Z-score,inflow_amount
+eus_WQT7NNsuuuVkDmcy7Fqrf7,inflow_amount,last_6_calendar_months,13355109.74,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),12.256487508445069,Z-score,inflow_amount
+eus_iL2xiCohwqnH3cxBpwfL2S,inflow_amount,last_6_calendar_months,3782744.77,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),3.1897415178665582,Z-score,inflow_amount
+eus_YwAk8Usji2jfrtWji4QoDJ,inflow_amount,last_6_calendar_months,6038225.84,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),5.326086508089828,Z-score,inflow_amount
+eus_C9xZHaxi9mVZDieFSGpHmi,inflow_amount,last_6_calendar_months,3874942.63,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),3.2770694227380037,Z-score,inflow_amount
+eus_8UYcJTaxNfpB7FgtLLGKGJ,inflow_amount,last_6_calendar_months,5007707.28,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),4.350000655598901,Z-score,inflow_amount
+eus_hbsjSU9X3ycgJ9NnUKWFCt,inflow_amount,last_6_calendar_months,5065400.36,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),4.404646346962895,Z-score,inflow_amount
+eus_5DQGx45M3qVWgaKhBgAFzB,inflow_amount,last_6_calendar_months,4336987.86,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),3.714709102137778,Z-score,inflow_amount
+eus_4C4mJ7cAbSFhHGkpo4dYs4,inflow_amount,last_6_calendar_months,11361336.66,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),10.368026910059278,Z-score,inflow_amount
+eus_bdPUwVi9QXk5f56Ap5dky4,inflow_amount,last_6_calendar_months,5811645.59,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),5.111474384579061,Z-score,inflow_amount
+eus_L8qwooxABDqcjUFLJSfoW9,inflow_amount,last_6_calendar_months,19970579.71,data_quality,amount,The amount in inflow transactions (Transaction.amount > 0),18.522523750718648,Z-score,inflow_amount

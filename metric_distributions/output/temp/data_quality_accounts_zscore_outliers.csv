@@ -1,0 +1,10 @@
+heron_id,metric_label,metric_date_range,metric_value,metric_group,metric_unit,metric_description,outlier_score,outlier_method,metric_name
+eus_gc6DCMnJsZKJYcJH3o3bKZ,accounts,latest,58.0,data_quality,n,The number of unique account_id,7.250807146934045,Z-score,accounts
+eus_264GctgNhcqHemTqT2DgGy,accounts,latest,56.0,data_quality,n,The number of unique account_id,6.980713196479256,Z-score,accounts
+eus_C9xZHaxi9mVZDieFSGpHmi,accounts,latest,32.0,data_quality,n,The number of unique account_id,3.7395857910217845,Z-score,accounts
+eus_e4aJCzEiZZVrjxMUxhw5rB,accounts,latest,38.0,data_quality,n,The number of unique account_id,4.549867642386153,Z-score,accounts
+eus_V7fmonTkxdx3YbseWGRnV6,accounts,latest,51.0,data_quality,n,The number of unique account_id,6.305478320342283,Z-score,accounts
+eus_EFk7UNEQxt2Pfshb9JNcLf,accounts,latest,184.0,data_quality,n,The number of unique account_id,24.26672602558577,Z-score,accounts
+eus_4C4mJ7cAbSFhHGkpo4dYs4,accounts,latest,30.0,data_quality,n,The number of unique account_id,3.4694918405669952,Z-score,accounts
+eus_UqbRXcpuXaoNSV338wXvRF,accounts,latest,29.0,data_quality,n,The number of unique account_id,3.334444865339601,Z-score,accounts
+eus_L8qwooxABDqcjUFLJSfoW9,accounts,latest,40.0,data_quality,n,The number of unique account_id,4.819961592840942,Z-score,accounts
