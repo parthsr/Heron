@@ -331,3 +331,529 @@
 2025-05-16 07:53:36,428 - INFO - Generating analysis report...
 2025-05-16 07:53:36,429 - INFO - Report generated successfully
 2025-05-16 07:53:36,429 - INFO - Analysis complete. Check reports in metric_distributions/output/reports and plots in metric_distributions/output/plots
+2025-05-17 10:27:19,066 - INFO - Starting metric distribution analysis...
+2025-05-17 10:27:19,067 - INFO - Cleaning up previous outputs...
+2025-05-17 10:27:19,082 - INFO - Removed plot directory: metric_distributions/output/plots
+2025-05-17 10:27:19,083 - INFO - Removed report directory: metric_distributions/output/reports
+2025-05-17 10:27:19,084 - INFO - Created fresh output directories
+2025-05-17 10:27:19,084 - INFO - Loading metrics definitions from metrics.csv...
+2025-05-17 10:27:19,117 - INFO - Loaded 69 metric definitions
+2025-05-17 10:27:19,120 - INFO - Processing group: balance
+2025-05-17 10:27:19,123 - INFO - Analyzing metric: inflow_growth_rate
+2025-05-17 10:27:19,123 - INFO - Processing data for metric: inflow_growth_rate
+2025-05-17 10:27:19,915 - INFO - Found 4 Z-score outliers and 42 IQR outliers for inflow_growth_rate
+2025-05-17 10:27:21,635 - INFO - Analyzing metric: inflow_daily_average
+2025-05-17 10:27:21,635 - INFO - Processing data for metric: inflow_daily_average
+2025-05-17 10:27:22,389 - INFO - Found 12 Z-score outliers and 68 IQR outliers for inflow_daily_average
+2025-05-17 10:27:23,019 - INFO - Analyzing metric: outflow_daily_average
+2025-05-17 10:27:23,020 - INFO - Processing data for metric: outflow_daily_average
+2025-05-17 10:27:23,860 - INFO - Found 7 Z-score outliers and 72 IQR outliers for outflow_daily_average
+2025-05-17 10:27:24,182 - INFO - Analyzing metric: latest_balance
+2025-05-17 10:27:24,183 - INFO - Processing data for metric: latest_balance
+2025-05-17 10:27:24,944 - INFO - Found 7 Z-score outliers and 77 IQR outliers for latest_balance
+2025-05-17 10:27:25,526 - INFO - Analyzing metric: balance_minimum
+2025-05-17 10:27:25,526 - INFO - Processing data for metric: balance_minimum
+2025-05-17 10:27:26,278 - INFO - Found 1 Z-score outliers and 540 IQR outliers for balance_minimum
+2025-05-17 10:27:26,769 - INFO - Analyzing metric: balance_average
+2025-05-17 10:27:26,769 - INFO - Processing data for metric: balance_average
+2025-05-17 10:27:27,520 - INFO - Found 9 Z-score outliers and 647 IQR outliers for balance_average
+2025-05-17 10:27:28,118 - INFO - Analyzing metric: change_in_balance
+2025-05-17 10:27:28,118 - INFO - Processing data for metric: change_in_balance
+2025-05-17 10:27:28,863 - INFO - Found 3 Z-score outliers and 471 IQR outliers for change_in_balance
+2025-05-17 10:27:29,292 - INFO - Analyzing metric: weekday_balance_average
+2025-05-17 10:27:29,292 - INFO - Processing data for metric: weekday_balance_average
+2025-05-17 10:27:30,038 - INFO - Found 1 Z-score outliers and 65 IQR outliers for weekday_balance_average
+2025-05-17 10:27:30,439 - INFO - Analyzing metric: weekday_with_highest_avg
+2025-05-17 10:27:30,439 - INFO - Processing data for metric: weekday_with_highest_avg
+2025-05-17 10:27:31,188 - INFO - Found 0 Z-score outliers and 0 IQR outliers for weekday_with_highest_avg
+2025-05-17 10:27:31,621 - INFO - Analyzing metric: weekday_with_lowest_avg
+2025-05-17 10:27:31,622 - INFO - Processing data for metric: weekday_with_lowest_avg
+2025-05-17 10:27:32,414 - INFO - Found 0 Z-score outliers and 0 IQR outliers for weekday_with_lowest_avg
+2025-05-17 10:27:32,840 - INFO - Processing group: data_quality
+2025-05-17 10:27:32,841 - INFO - Analyzing metric: data_volume
+2025-05-17 10:27:32,841 - INFO - Processing data for metric: data_volume
+2025-05-17 10:27:33,615 - INFO - Found 14 Z-score outliers and 17 IQR outliers for data_volume
+2025-05-17 10:27:34,078 - INFO - Analyzing metric: date_range
+2025-05-17 10:27:34,078 - INFO - Processing data for metric: date_range
+2025-05-17 10:27:34,856 - INFO - Found 26 Z-score outliers and 28 IQR outliers for date_range
+2025-05-17 10:27:35,308 - INFO - Analyzing metric: data_freshness
+2025-05-17 10:27:35,308 - INFO - Processing data for metric: data_freshness
+2025-05-17 10:27:36,094 - INFO - Found 0 Z-score outliers and 0 IQR outliers for data_freshness
+2025-05-17 10:27:36,137 - ERROR - An error occurred during analysis: The data appears to lie in a lower-dimensional subspace of the space in which it is expressed. This has resulted in a singular data covariance matrix, which cannot be treated using the algorithms implemented in `gaussian_kde`. Consider performing principal component analysis / dimensionality reduction and using `gaussian_kde` with the transformed data.
+Traceback (most recent call last):
+  File "/Users/parthsrivastava/miniconda/lib/python3.12/site-packages/scipy/stats/_kde.py", line 226, in __init__
+    self.set_bandwidth(bw_method=bw_method)
+  File "/Users/parthsrivastava/miniconda/lib/python3.12/site-packages/scipy/stats/_kde.py", line 574, in set_bandwidth
+    self._compute_covariance()
+  File "/Users/parthsrivastava/miniconda/lib/python3.12/site-packages/scipy/stats/_kde.py", line 586, in _compute_covariance
+    self._data_cho_cov = linalg.cholesky(self._data_covariance,
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parthsrivastava/miniconda/lib/python3.12/site-packages/scipy/linalg/_decomp_cholesky.py", line 101, in cholesky
+    c, lower = _cholesky(a, lower=lower, overwrite_a=overwrite_a, clean=True,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parthsrivastava/miniconda/lib/python3.12/site-packages/scipy/linalg/_decomp_cholesky.py", line 38, in _cholesky
+    raise LinAlgError("%d-th leading minor of the array is not positive "
+numpy.linalg.LinAlgError: 1-th leading minor of the array is not positive definite
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/parthsrivastava/Heron/metric_distributions/metric_distribution_analysis.py", line 269, in main
+    results = analyze_metric(metric_name, group, unit_str)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parthsrivastava/Heron/metric_distributions/metric_distribution_analysis.py", line 136, in analyze_metric
+    plot_distribution(metric_df, metric_name, metric_group, unit)
+  File "/Users/parthsrivastava/Heron/metric_distributions/metric_distribution_analysis.py", line 161, in plot_distribution
+    kde = stats.gaussian_kde(df['metric_value'].dropna())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/parthsrivastava/miniconda/lib/python3.12/site-packages/scipy/stats/_kde.py", line 235, in __init__
+    raise linalg.LinAlgError(msg) from e
+numpy.linalg.LinAlgError: The data appears to lie in a lower-dimensional subspace of the space in which it is expressed. This has resulted in a singular data covariance matrix, which cannot be treated using the algorithms implemented in `gaussian_kde`. Consider performing principal component analysis / dimensionality reduction and using `gaussian_kde` with the transformed data.
+2025-05-17 10:27:55,329 - INFO - Starting metric distribution analysis...
+2025-05-17 10:27:55,330 - INFO - Cleaning up previous outputs...
+2025-05-17 10:27:55,332 - INFO - Removed plot directory: metric_distributions/output/plots
+2025-05-17 10:27:55,332 - INFO - Removed report directory: metric_distributions/output/reports
+2025-05-17 10:27:55,333 - INFO - Created fresh output directories
+2025-05-17 10:27:55,333 - INFO - Loading metrics definitions from metrics.csv...
+2025-05-17 10:27:55,351 - INFO - Loaded 69 metric definitions
+2025-05-17 10:27:55,354 - INFO - Processing group: balance
+2025-05-17 10:27:55,356 - INFO - Analyzing metric: inflow_growth_rate
+2025-05-17 10:27:55,356 - INFO - Processing data for metric: inflow_growth_rate
+2025-05-17 10:27:56,235 - INFO - Found 4 Z-score outliers and 42 IQR outliers for inflow_growth_rate
+2025-05-17 10:27:57,779 - INFO - Analyzing metric: inflow_daily_average
+2025-05-17 10:27:57,779 - INFO - Processing data for metric: inflow_daily_average
+2025-05-17 10:27:58,522 - INFO - Found 12 Z-score outliers and 68 IQR outliers for inflow_daily_average
+2025-05-17 10:27:59,085 - INFO - Analyzing metric: outflow_daily_average
+2025-05-17 10:27:59,085 - INFO - Processing data for metric: outflow_daily_average
+2025-05-17 10:27:59,810 - INFO - Found 7 Z-score outliers and 72 IQR outliers for outflow_daily_average
+2025-05-17 10:28:00,127 - INFO - Analyzing metric: latest_balance
+2025-05-17 10:28:00,127 - INFO - Processing data for metric: latest_balance
+2025-05-17 10:28:00,842 - INFO - Found 7 Z-score outliers and 77 IQR outliers for latest_balance
+2025-05-17 10:28:01,414 - INFO - Analyzing metric: balance_minimum
+2025-05-17 10:28:01,415 - INFO - Processing data for metric: balance_minimum
+2025-05-17 10:28:02,190 - INFO - Found 1 Z-score outliers and 540 IQR outliers for balance_minimum
+2025-05-17 10:28:02,689 - INFO - Analyzing metric: balance_average
+2025-05-17 10:28:02,689 - INFO - Processing data for metric: balance_average
+2025-05-17 10:28:03,427 - INFO - Found 9 Z-score outliers and 647 IQR outliers for balance_average
+2025-05-17 10:28:04,010 - INFO - Analyzing metric: change_in_balance
+2025-05-17 10:28:04,010 - INFO - Processing data for metric: change_in_balance
+2025-05-17 10:28:04,729 - INFO - Found 3 Z-score outliers and 471 IQR outliers for change_in_balance
+2025-05-17 10:28:05,153 - INFO - Analyzing metric: weekday_balance_average
+2025-05-17 10:28:05,153 - INFO - Processing data for metric: weekday_balance_average
+2025-05-17 10:28:05,922 - INFO - Found 1 Z-score outliers and 65 IQR outliers for weekday_balance_average
+2025-05-17 10:28:06,324 - INFO - Analyzing metric: weekday_with_highest_avg
+2025-05-17 10:28:06,324 - INFO - Processing data for metric: weekday_with_highest_avg
+2025-05-17 10:28:07,069 - INFO - Found 0 Z-score outliers and 0 IQR outliers for weekday_with_highest_avg
+2025-05-17 10:28:07,482 - INFO - Analyzing metric: weekday_with_lowest_avg
+2025-05-17 10:28:07,482 - INFO - Processing data for metric: weekday_with_lowest_avg
+2025-05-17 10:28:08,217 - INFO - Found 0 Z-score outliers and 0 IQR outliers for weekday_with_lowest_avg
+2025-05-17 10:28:08,644 - INFO - Processing group: data_quality
+2025-05-17 10:28:08,645 - INFO - Analyzing metric: data_volume
+2025-05-17 10:28:08,645 - INFO - Processing data for metric: data_volume
+2025-05-17 10:28:09,409 - INFO - Found 14 Z-score outliers and 17 IQR outliers for data_volume
+2025-05-17 10:28:09,856 - INFO - Analyzing metric: date_range
+2025-05-17 10:28:09,857 - INFO - Processing data for metric: date_range
+2025-05-17 10:28:10,584 - INFO - Found 26 Z-score outliers and 28 IQR outliers for date_range
+2025-05-17 10:28:11,017 - INFO - Analyzing metric: data_freshness
+2025-05-17 10:28:11,017 - INFO - Processing data for metric: data_freshness
+2025-05-17 10:28:11,752 - INFO - Found 0 Z-score outliers and 0 IQR outliers for data_freshness
+2025-05-17 10:28:12,082 - INFO - Analyzing metric: has_balance_ratio
+2025-05-17 10:28:12,082 - INFO - Processing data for metric: has_balance_ratio
+2025-05-17 10:28:12,804 - INFO - Found 6 Z-score outliers and 0 IQR outliers for has_balance_ratio
+2025-05-17 10:28:13,245 - INFO - Analyzing metric: data_coverage
+2025-05-17 10:28:13,245 - INFO - Processing data for metric: data_coverage
+2025-05-17 10:28:14,160 - INFO - Found 0 Z-score outliers and 0 IQR outliers for data_coverage
+2025-05-17 10:28:14,602 - INFO - Analyzing metric: accounts
+2025-05-17 10:28:14,602 - INFO - Processing data for metric: accounts
+2025-05-17 10:28:15,345 - INFO - Found 9 Z-score outliers and 24 IQR outliers for accounts
+2025-05-17 10:28:15,792 - INFO - Analyzing metric: potentially_duplicated_account_pairs
+2025-05-17 10:28:15,792 - INFO - Processing data for metric: potentially_duplicated_account_pairs
+2025-05-17 10:28:16,544 - INFO - Found 0 Z-score outliers and 0 IQR outliers for potentially_duplicated_account_pairs
+2025-05-17 10:28:16,886 - INFO - Analyzing metric: inflows
+2025-05-17 10:28:16,886 - INFO - Processing data for metric: inflows
+2025-05-17 10:28:17,631 - INFO - Found 76 Z-score outliers and 231 IQR outliers for inflows
+2025-05-17 10:28:18,207 - INFO - Analyzing metric: outflows
+2025-05-17 10:28:18,207 - INFO - Processing data for metric: outflows
+2025-05-17 10:28:18,951 - INFO - Found 102 Z-score outliers and 221 IQR outliers for outflows
+2025-05-17 10:28:19,529 - INFO - Analyzing metric: inflow_amount
+2025-05-17 10:28:19,530 - INFO - Processing data for metric: inflow_amount
+2025-05-17 10:28:20,267 - INFO - Found 11 Z-score outliers and 66 IQR outliers for inflow_amount
+2025-05-17 10:28:20,853 - INFO - Analyzing metric: confidence
+2025-05-17 10:28:20,853 - INFO - Processing data for metric: confidence
+2025-05-17 10:28:21,591 - INFO - Found 5 Z-score outliers and 2 IQR outliers for confidence
+2025-05-17 10:28:22,026 - INFO - Analyzing metric: revenue_anomalies
+2025-05-17 10:28:22,026 - INFO - Processing data for metric: revenue_anomalies
+2025-05-17 10:28:22,763 - INFO - Found 8 Z-score outliers and 33 IQR outliers for revenue_anomalies
+2025-05-17 10:28:23,181 - INFO - Processing group: debt
+2025-05-17 10:28:23,182 - INFO - Analyzing metric: last_debt_investment
+2025-05-17 10:28:23,182 - INFO - Processing data for metric: last_debt_investment
+2025-05-17 10:28:23,932 - INFO - Found 64 Z-score outliers and 120 IQR outliers for last_debt_investment
+2025-05-17 10:28:24,513 - INFO - Analyzing metric: last_debt_investment_days
+2025-05-17 10:28:24,513 - INFO - Processing data for metric: last_debt_investment_days
+2025-05-17 10:28:25,267 - INFO - Found 12 Z-score outliers and 8 IQR outliers for last_debt_investment_days
+2025-05-17 10:28:25,786 - INFO - Analyzing metric: debt_repayment_daily_average
+2025-05-17 10:28:25,786 - INFO - Processing data for metric: debt_repayment_daily_average
+2025-05-17 10:28:26,537 - INFO - Found 23 Z-score outliers and 407 IQR outliers for debt_repayment_daily_average
+2025-05-17 10:28:27,188 - INFO - Analyzing metric: debt_investment
+2025-05-17 10:28:27,189 - INFO - Processing data for metric: debt_investment
+2025-05-17 10:28:27,967 - INFO - Found 32 Z-score outliers and 1151 IQR outliers for debt_investment
+2025-05-17 10:28:28,588 - INFO - Analyzing metric: debt_investors
+2025-05-17 10:28:28,589 - INFO - Processing data for metric: debt_investors
+2025-05-17 10:28:29,365 - INFO - Found 173 Z-score outliers and 173 IQR outliers for debt_investors
+2025-05-17 10:28:29,840 - INFO - Analyzing metric: debt_investment_count
+2025-05-17 10:28:29,840 - INFO - Processing data for metric: debt_investment_count
+2025-05-17 10:28:30,614 - INFO - Found 23 Z-score outliers and 93 IQR outliers for debt_investment_count
+2025-05-17 10:28:31,042 - INFO - Analyzing metric: debt_repayment
+2025-05-17 10:28:31,042 - INFO - Processing data for metric: debt_repayment
+2025-05-17 10:28:31,823 - INFO - Found 37 Z-score outliers and 391 IQR outliers for debt_repayment
+2025-05-17 10:28:32,408 - INFO - Analyzing metric: debt_service_coverage_ratio
+2025-05-17 10:28:32,408 - INFO - Processing data for metric: debt_service_coverage_ratio
+2025-05-17 10:28:33,184 - INFO - Found 2 Z-score outliers and 1015 IQR outliers for debt_service_coverage_ratio
+2025-05-17 10:28:33,802 - INFO - Processing group: heron
+2025-05-17 10:28:33,803 - INFO - Analyzing metric: merchant_heron_ids
+2025-05-17 10:28:33,803 - INFO - Processing data for metric: merchant_heron_ids
+2025-05-17 10:28:34,578 - INFO - Found 0 Z-score outliers and 0 IQR outliers for merchant_heron_ids
+2025-05-17 10:28:35,055 - INFO - Analyzing metric: predicted_nsf_fees
+2025-05-17 10:28:35,055 - INFO - Processing data for metric: predicted_nsf_fees
+2025-05-17 10:28:35,838 - INFO - Found 138 Z-score outliers and 368 IQR outliers for predicted_nsf_fees
+2025-05-17 10:28:36,355 - INFO - Analyzing metric: predicted_balance_daily_average
+2025-05-17 10:28:36,355 - INFO - Processing data for metric: predicted_balance_daily_average
+2025-05-17 10:28:37,146 - INFO - Found 6 Z-score outliers and 219 IQR outliers for predicted_balance_daily_average
+2025-05-17 10:28:37,760 - INFO - Analyzing metric: heron_score
+2025-05-17 10:28:37,761 - INFO - Processing data for metric: heron_score
+2025-05-17 10:28:38,547 - INFO - Found 0 Z-score outliers and 0 IQR outliers for heron_score
+2025-05-17 10:28:39,078 - INFO - Analyzing metric: distinct_mcas_from_outflows
+2025-05-17 10:28:39,078 - INFO - Processing data for metric: distinct_mcas_from_outflows
+2025-05-17 10:28:39,854 - INFO - Found 0 Z-score outliers and 0 IQR outliers for distinct_mcas_from_outflows
+2025-05-17 10:28:40,191 - INFO - Analyzing metric: distinct_mcas_from_inflows
+2025-05-17 10:28:40,191 - INFO - Processing data for metric: distinct_mcas_from_inflows
+2025-05-17 10:28:40,970 - INFO - Found 0 Z-score outliers and 0 IQR outliers for distinct_mcas_from_inflows
+2025-05-17 10:28:41,305 - INFO - Processing group: processing_quality
+2025-05-17 10:28:41,306 - INFO - Analyzing metric: category_coverage
+2025-05-17 10:28:41,306 - INFO - Processing data for metric: category_coverage
+2025-05-17 10:28:42,097 - INFO - Found 0 Z-score outliers and 0 IQR outliers for category_coverage
+2025-05-17 10:28:42,574 - INFO - Analyzing metric: merchant_coverage
+2025-05-17 10:28:42,574 - INFO - Processing data for metric: merchant_coverage
+2025-05-17 10:28:43,365 - INFO - Found 1 Z-score outliers and 0 IQR outliers for merchant_coverage
+2025-05-17 10:28:43,855 - INFO - Analyzing metric: unconnected_account_ratio
+2025-05-17 10:28:43,855 - INFO - Processing data for metric: unconnected_account_ratio
+2025-05-17 10:28:44,643 - INFO - Found 3 Z-score outliers and 88 IQR outliers for unconnected_account_ratio
+2025-05-17 10:28:45,062 - INFO - Processing group: profit_and_loss
+2025-05-17 10:28:45,062 - INFO - Analyzing metric: revenue_daily_average
+2025-05-17 10:28:45,063 - INFO - Processing data for metric: revenue_daily_average
+2025-05-17 10:28:45,855 - INFO - Found 137 Z-score outliers and 904 IQR outliers for revenue_daily_average
+2025-05-17 10:28:46,455 - INFO - Analyzing metric: cogs_daily_average
+2025-05-17 10:28:46,455 - INFO - Processing data for metric: cogs_daily_average
+2025-05-17 10:28:47,263 - INFO - Found 19 Z-score outliers and 657 IQR outliers for cogs_daily_average
+2025-05-17 10:28:47,890 - INFO - Analyzing metric: opex_daily_average
+2025-05-17 10:28:47,891 - INFO - Processing data for metric: opex_daily_average
+2025-05-17 10:28:48,691 - INFO - Found 25 Z-score outliers and 386 IQR outliers for opex_daily_average
+2025-05-17 10:28:49,191 - INFO - Analyzing metric: revenue_sources
+2025-05-17 10:28:49,191 - INFO - Processing data for metric: revenue_sources
+2025-05-17 10:28:49,990 - INFO - Found 22 Z-score outliers and 10 IQR outliers for revenue_sources
+2025-05-17 10:28:50,426 - INFO - Analyzing metric: revenue
+2025-05-17 10:28:50,426 - INFO - Processing data for metric: revenue
+2025-05-17 10:28:51,217 - INFO - Found 63 Z-score outliers and 319 IQR outliers for revenue
+2025-05-17 10:28:51,707 - INFO - Analyzing metric: annualized_revenue
+2025-05-17 10:28:51,707 - INFO - Processing data for metric: annualized_revenue
+2025-05-17 10:28:52,512 - INFO - Found 72 Z-score outliers and 254 IQR outliers for annualized_revenue
+2025-05-17 10:28:53,167 - INFO - Analyzing metric: cogs
+2025-05-17 10:28:53,167 - INFO - Processing data for metric: cogs
+2025-05-17 10:28:53,977 - INFO - Found 19 Z-score outliers and 503 IQR outliers for cogs
+2025-05-17 10:28:54,603 - INFO - Analyzing metric: average_credit_card_spend
+2025-05-17 10:28:54,603 - INFO - Processing data for metric: average_credit_card_spend
+2025-05-17 10:28:55,413 - INFO - Found 18 Z-score outliers and 285 IQR outliers for average_credit_card_spend
+2025-05-17 10:28:56,045 - INFO - Analyzing metric: opex
+2025-05-17 10:28:56,045 - INFO - Processing data for metric: opex
+2025-05-17 10:28:56,845 - INFO - Found 18 Z-score outliers and 340 IQR outliers for opex
+2025-05-17 10:28:57,334 - INFO - Analyzing metric: revenue_profit_and_loss
+2025-05-17 10:28:57,335 - INFO - Processing data for metric: revenue_profit_and_loss
+2025-05-17 10:28:58,160 - INFO - Found 63 Z-score outliers and 319 IQR outliers for revenue_profit_and_loss
+2025-05-17 10:28:58,654 - INFO - Analyzing metric: annualized_revenue_profit_and_loss
+2025-05-17 10:28:58,654 - INFO - Processing data for metric: annualized_revenue_profit_and_loss
+2025-05-17 10:28:59,470 - INFO - Found 72 Z-score outliers and 254 IQR outliers for annualized_revenue_profit_and_loss
+2025-05-17 10:28:59,968 - INFO - Analyzing metric: cogs_profit_and_loss
+2025-05-17 10:28:59,968 - INFO - Processing data for metric: cogs_profit_and_loss
+2025-05-17 10:29:00,786 - INFO - Found 19 Z-score outliers and 503 IQR outliers for cogs_profit_and_loss
+2025-05-17 10:29:01,433 - INFO - Analyzing metric: opex_profit_and_loss
+2025-05-17 10:29:01,433 - INFO - Processing data for metric: opex_profit_and_loss
+2025-05-17 10:29:02,255 - INFO - Found 18 Z-score outliers and 340 IQR outliers for opex_profit_and_loss
+2025-05-17 10:29:02,740 - INFO - Analyzing metric: revenue_monthly_average
+2025-05-17 10:29:02,740 - INFO - Processing data for metric: revenue_monthly_average
+2025-05-17 10:29:03,565 - INFO - Found 71 Z-score outliers and 256 IQR outliers for revenue_monthly_average
+2025-05-17 10:29:04,215 - INFO - Analyzing metric: revenue_growth_rate
+2025-05-17 10:29:04,215 - INFO - Processing data for metric: revenue_growth_rate
+2025-05-17 10:29:05,038 - INFO - Found 4 Z-score outliers and 55 IQR outliers for revenue_growth_rate
+2025-05-17 10:29:05,602 - INFO - Analyzing metric: gross_operating_cashflow_daily_average
+2025-05-17 10:29:05,602 - INFO - Processing data for metric: gross_operating_cashflow_daily_average
+2025-05-17 10:29:06,423 - INFO - Found 109 Z-score outliers and 323 IQR outliers for gross_operating_cashflow_daily_average
+2025-05-17 10:29:06,938 - INFO - Analyzing metric: net_operating_cashflow_daily_average
+2025-05-17 10:29:06,938 - INFO - Processing data for metric: net_operating_cashflow_daily_average
+2025-05-17 10:29:07,770 - INFO - Found 26 Z-score outliers and 610 IQR outliers for net_operating_cashflow_daily_average
+2025-05-17 10:29:08,370 - INFO - Analyzing metric: gross_operating_cashflow
+2025-05-17 10:29:08,370 - INFO - Processing data for metric: gross_operating_cashflow
+2025-05-17 10:29:09,192 - INFO - Found 79 Z-score outliers and 315 IQR outliers for gross_operating_cashflow
+2025-05-17 10:29:09,690 - INFO - Analyzing metric: net_operating_cashflow
+2025-05-17 10:29:09,691 - INFO - Processing data for metric: net_operating_cashflow
+2025-05-17 10:29:10,524 - INFO - Found 18 Z-score outliers and 588 IQR outliers for net_operating_cashflow
+2025-05-17 10:29:11,116 - INFO - Analyzing metric: gross_operating_cashflow_profit_and_loss
+2025-05-17 10:29:11,116 - INFO - Processing data for metric: gross_operating_cashflow_profit_and_loss
+2025-05-17 10:29:11,956 - INFO - Found 79 Z-score outliers and 315 IQR outliers for gross_operating_cashflow_profit_and_loss
+2025-05-17 10:29:12,452 - INFO - Analyzing metric: net_operating_cashflow_profit_and_loss
+2025-05-17 10:29:12,452 - INFO - Processing data for metric: net_operating_cashflow_profit_and_loss
+2025-05-17 10:29:13,469 - INFO - Found 18 Z-score outliers and 588 IQR outliers for net_operating_cashflow_profit_and_loss
+2025-05-17 10:29:14,072 - INFO - Processing group: risk_flag
+2025-05-17 10:29:14,073 - INFO - Analyzing metric: deposit_days
+2025-05-17 10:29:14,073 - INFO - Processing data for metric: deposit_days
+2025-05-17 10:29:14,907 - INFO - Found 243 Z-score outliers and 65 IQR outliers for deposit_days
+2025-05-17 10:29:15,621 - INFO - Analyzing metric: nsf_fees
+2025-05-17 10:29:15,621 - INFO - Processing data for metric: nsf_fees
+2025-05-17 10:29:16,468 - INFO - Found 50 Z-score outliers and 990 IQR outliers for nsf_fees
+2025-05-17 10:29:17,007 - INFO - Analyzing metric: nsf_days
+2025-05-17 10:29:17,007 - INFO - Processing data for metric: nsf_days
+2025-05-17 10:29:17,858 - INFO - Found 83 Z-score outliers and 416 IQR outliers for nsf_days
+2025-05-17 10:29:18,516 - INFO - Analyzing metric: debt_collection
+2025-05-17 10:29:18,516 - INFO - Processing data for metric: debt_collection
+2025-05-17 10:29:19,361 - INFO - Found 0 Z-score outliers and 0 IQR outliers for debt_collection
+2025-05-17 10:29:19,706 - INFO - Analyzing metric: atm_withdrawals
+2025-05-17 10:29:19,706 - INFO - Processing data for metric: atm_withdrawals
+2025-05-17 10:29:20,556 - INFO - Found 13 Z-score outliers and 136 IQR outliers for atm_withdrawals
+2025-05-17 10:29:21,107 - INFO - Analyzing metric: tax_payments
+2025-05-17 10:29:21,107 - INFO - Processing data for metric: tax_payments
+2025-05-17 10:29:21,963 - INFO - Found 15 Z-score outliers and 49 IQR outliers for tax_payments
+2025-05-17 10:29:22,421 - INFO - Analyzing metric: tax_payment_amount
+2025-05-17 10:29:22,422 - INFO - Processing data for metric: tax_payment_amount
+2025-05-17 10:29:23,267 - INFO - Found 13 Z-score outliers and 118 IQR outliers for tax_payment_amount
+2025-05-17 10:29:23,826 - INFO - Analyzing metric: negative_balance_days
+2025-05-17 10:29:23,826 - INFO - Processing data for metric: negative_balance_days
+2025-05-17 10:29:24,680 - INFO - Found 142 Z-score outliers and 493 IQR outliers for negative_balance_days
+2025-05-17 10:29:25,259 - INFO - Analyzing metric: negative_balance_days_by_account
+2025-05-17 10:29:25,259 - INFO - Processing data for metric: negative_balance_days_by_account
+2025-05-17 10:29:26,112 - INFO - Found 3 Z-score outliers and 419 IQR outliers for negative_balance_days_by_account
+2025-05-17 10:29:26,776 - INFO - Generating analysis report...
+2025-05-17 10:29:26,777 - INFO - Report generated successfully
+2025-05-17 10:29:26,777 - INFO - Analysis complete. Check reports in metric_distributions/output/reports and plots in metric_distributions/output/plots
+2025-05-17 10:32:01,940 - INFO - Starting metric distribution analysis...
+2025-05-17 10:32:01,941 - INFO - Cleaning up previous outputs...
+2025-05-17 10:32:01,955 - INFO - Removed plot directory: metric_distributions/output/plots
+2025-05-17 10:32:01,955 - INFO - Removed report directory: metric_distributions/output/reports
+2025-05-17 10:32:01,956 - INFO - Created fresh output directories
+2025-05-17 10:32:01,956 - INFO - Loading metrics definitions from metrics.csv...
+2025-05-17 10:32:01,973 - INFO - Loaded 69 metric definitions
+2025-05-17 10:32:01,976 - INFO - Processing group: balance
+2025-05-17 10:32:01,979 - INFO - Analyzing metric: inflow_growth_rate
+2025-05-17 10:32:01,979 - INFO - Processing data for metric: inflow_growth_rate
+2025-05-17 10:32:02,906 - INFO - Found 4 Z-score outliers and 42 IQR outliers for inflow_growth_rate
+2025-05-17 10:32:03,556 - INFO - Analyzing metric: inflow_daily_average
+2025-05-17 10:32:03,556 - INFO - Processing data for metric: inflow_daily_average
+2025-05-17 10:32:04,327 - INFO - Found 12 Z-score outliers and 68 IQR outliers for inflow_daily_average
+2025-05-17 10:32:04,572 - INFO - Analyzing metric: outflow_daily_average
+2025-05-17 10:32:04,572 - INFO - Processing data for metric: outflow_daily_average
+2025-05-17 10:32:05,326 - INFO - Found 7 Z-score outliers and 72 IQR outliers for outflow_daily_average
+2025-05-17 10:32:05,576 - INFO - Analyzing metric: latest_balance
+2025-05-17 10:32:05,576 - INFO - Processing data for metric: latest_balance
+2025-05-17 10:32:06,314 - INFO - Found 7 Z-score outliers and 77 IQR outliers for latest_balance
+2025-05-17 10:32:06,557 - INFO - Analyzing metric: balance_minimum
+2025-05-17 10:32:06,557 - INFO - Processing data for metric: balance_minimum
+2025-05-17 10:32:07,300 - INFO - Found 1 Z-score outliers and 540 IQR outliers for balance_minimum
+2025-05-17 10:32:07,599 - INFO - Analyzing metric: balance_average
+2025-05-17 10:32:07,599 - INFO - Processing data for metric: balance_average
+2025-05-17 10:32:08,354 - INFO - Found 9 Z-score outliers and 647 IQR outliers for balance_average
+2025-05-17 10:32:08,687 - INFO - Analyzing metric: change_in_balance
+2025-05-17 10:32:08,688 - INFO - Processing data for metric: change_in_balance
+2025-05-17 10:32:09,444 - INFO - Found 3 Z-score outliers and 471 IQR outliers for change_in_balance
+2025-05-17 10:32:09,719 - INFO - Analyzing metric: weekday_balance_average
+2025-05-17 10:32:09,719 - INFO - Processing data for metric: weekday_balance_average
+2025-05-17 10:32:10,499 - INFO - Found 1 Z-score outliers and 65 IQR outliers for weekday_balance_average
+2025-05-17 10:32:10,742 - INFO - Analyzing metric: weekday_with_highest_avg
+2025-05-17 10:32:10,742 - INFO - Processing data for metric: weekday_with_highest_avg
+2025-05-17 10:32:11,516 - INFO - Found 0 Z-score outliers and 0 IQR outliers for weekday_with_highest_avg
+2025-05-17 10:32:11,757 - INFO - Analyzing metric: weekday_with_lowest_avg
+2025-05-17 10:32:11,758 - INFO - Processing data for metric: weekday_with_lowest_avg
+2025-05-17 10:32:12,508 - INFO - Found 0 Z-score outliers and 0 IQR outliers for weekday_with_lowest_avg
+2025-05-17 10:32:12,749 - INFO - Processing group: data_quality
+2025-05-17 10:32:12,750 - INFO - Analyzing metric: data_volume
+2025-05-17 10:32:12,750 - INFO - Processing data for metric: data_volume
+2025-05-17 10:32:13,524 - INFO - Found 14 Z-score outliers and 17 IQR outliers for data_volume
+2025-05-17 10:32:13,775 - INFO - Analyzing metric: date_range
+2025-05-17 10:32:13,775 - INFO - Processing data for metric: date_range
+2025-05-17 10:32:14,569 - INFO - Found 26 Z-score outliers and 28 IQR outliers for date_range
+2025-05-17 10:32:14,819 - INFO - Analyzing metric: data_freshness
+2025-05-17 10:32:14,820 - INFO - Processing data for metric: data_freshness
+2025-05-17 10:32:15,585 - INFO - Found 0 Z-score outliers and 0 IQR outliers for data_freshness
+2025-05-17 10:32:15,857 - INFO - Analyzing metric: has_balance_ratio
+2025-05-17 10:32:15,857 - INFO - Processing data for metric: has_balance_ratio
+2025-05-17 10:32:16,613 - INFO - Found 6 Z-score outliers and 0 IQR outliers for has_balance_ratio
+2025-05-17 10:32:16,856 - INFO - Analyzing metric: data_coverage
+2025-05-17 10:32:16,856 - INFO - Processing data for metric: data_coverage
+2025-05-17 10:32:17,619 - INFO - Found 0 Z-score outliers and 0 IQR outliers for data_coverage
+2025-05-17 10:32:17,861 - INFO - Analyzing metric: accounts
+2025-05-17 10:32:17,862 - INFO - Processing data for metric: accounts
+2025-05-17 10:32:18,634 - INFO - Found 9 Z-score outliers and 24 IQR outliers for accounts
+2025-05-17 10:32:18,884 - INFO - Analyzing metric: potentially_duplicated_account_pairs
+2025-05-17 10:32:18,884 - INFO - Processing data for metric: potentially_duplicated_account_pairs
+2025-05-17 10:32:19,647 - INFO - Found 0 Z-score outliers and 0 IQR outliers for potentially_duplicated_account_pairs
+2025-05-17 10:32:19,917 - INFO - Analyzing metric: inflows
+2025-05-17 10:32:19,917 - INFO - Processing data for metric: inflows
+2025-05-17 10:32:20,777 - INFO - Found 76 Z-score outliers and 231 IQR outliers for inflows
+2025-05-17 10:32:21,365 - INFO - Analyzing metric: outflows
+2025-05-17 10:32:21,365 - INFO - Processing data for metric: outflows
+2025-05-17 10:32:22,235 - INFO - Found 102 Z-score outliers and 221 IQR outliers for outflows
+2025-05-17 10:32:22,565 - INFO - Analyzing metric: inflow_amount
+2025-05-17 10:32:22,565 - INFO - Processing data for metric: inflow_amount
+2025-05-17 10:32:23,367 - INFO - Found 11 Z-score outliers and 66 IQR outliers for inflow_amount
+2025-05-17 10:32:23,637 - INFO - Analyzing metric: confidence
+2025-05-17 10:32:23,638 - INFO - Processing data for metric: confidence
+2025-05-17 10:32:24,443 - INFO - Found 5 Z-score outliers and 2 IQR outliers for confidence
+2025-05-17 10:32:24,715 - INFO - Analyzing metric: revenue_anomalies
+2025-05-17 10:32:24,715 - INFO - Processing data for metric: revenue_anomalies
+2025-05-17 10:32:25,515 - INFO - Found 8 Z-score outliers and 33 IQR outliers for revenue_anomalies
+2025-05-17 10:32:25,785 - INFO - Processing group: debt
+2025-05-17 10:32:25,786 - INFO - Analyzing metric: last_debt_investment
+2025-05-17 10:32:25,786 - INFO - Processing data for metric: last_debt_investment
+2025-05-17 10:32:26,587 - INFO - Found 64 Z-score outliers and 120 IQR outliers for last_debt_investment
+2025-05-17 10:32:26,842 - INFO - Analyzing metric: last_debt_investment_days
+2025-05-17 10:32:26,843 - INFO - Processing data for metric: last_debt_investment_days
+2025-05-17 10:32:27,625 - INFO - Found 12 Z-score outliers and 8 IQR outliers for last_debt_investment_days
+2025-05-17 10:32:27,872 - INFO - Analyzing metric: debt_repayment_daily_average
+2025-05-17 10:32:27,872 - INFO - Processing data for metric: debt_repayment_daily_average
+2025-05-17 10:32:28,655 - INFO - Found 23 Z-score outliers and 407 IQR outliers for debt_repayment_daily_average
+2025-05-17 10:32:28,942 - INFO - Analyzing metric: debt_investment
+2025-05-17 10:32:28,942 - INFO - Processing data for metric: debt_investment
+2025-05-17 10:32:29,722 - INFO - Found 32 Z-score outliers and 1151 IQR outliers for debt_investment
+2025-05-17 10:32:30,006 - INFO - Analyzing metric: debt_investors
+2025-05-17 10:32:30,006 - INFO - Processing data for metric: debt_investors
+2025-05-17 10:32:30,776 - INFO - Found 173 Z-score outliers and 173 IQR outliers for debt_investors
+2025-05-17 10:32:31,072 - INFO - Analyzing metric: debt_investment_count
+2025-05-17 10:32:31,072 - INFO - Processing data for metric: debt_investment_count
+2025-05-17 10:32:31,843 - INFO - Found 23 Z-score outliers and 93 IQR outliers for debt_investment_count
+2025-05-17 10:32:32,085 - INFO - Analyzing metric: debt_repayment
+2025-05-17 10:32:32,085 - INFO - Processing data for metric: debt_repayment
+2025-05-17 10:32:32,891 - INFO - Found 37 Z-score outliers and 391 IQR outliers for debt_repayment
+2025-05-17 10:32:33,159 - INFO - Analyzing metric: debt_service_coverage_ratio
+2025-05-17 10:32:33,159 - INFO - Processing data for metric: debt_service_coverage_ratio
+2025-05-17 10:32:33,959 - INFO - Found 2 Z-score outliers and 1015 IQR outliers for debt_service_coverage_ratio
+2025-05-17 10:32:34,237 - INFO - Processing group: heron
+2025-05-17 10:32:34,238 - INFO - Analyzing metric: merchant_heron_ids
+2025-05-17 10:32:34,238 - INFO - Processing data for metric: merchant_heron_ids
+2025-05-17 10:32:35,045 - INFO - Found 0 Z-score outliers and 0 IQR outliers for merchant_heron_ids
+2025-05-17 10:32:35,296 - INFO - Analyzing metric: predicted_nsf_fees
+2025-05-17 10:32:35,296 - INFO - Processing data for metric: predicted_nsf_fees
+2025-05-17 10:32:36,089 - INFO - Found 138 Z-score outliers and 368 IQR outliers for predicted_nsf_fees
+2025-05-17 10:32:36,352 - INFO - Analyzing metric: predicted_balance_daily_average
+2025-05-17 10:32:36,353 - INFO - Processing data for metric: predicted_balance_daily_average
+2025-05-17 10:32:37,151 - INFO - Found 6 Z-score outliers and 219 IQR outliers for predicted_balance_daily_average
+2025-05-17 10:32:37,424 - INFO - Analyzing metric: heron_score
+2025-05-17 10:32:37,424 - INFO - Processing data for metric: heron_score
+2025-05-17 10:32:38,203 - INFO - Found 0 Z-score outliers and 0 IQR outliers for heron_score
+2025-05-17 10:32:38,457 - INFO - Analyzing metric: distinct_mcas_from_outflows
+2025-05-17 10:32:38,457 - INFO - Processing data for metric: distinct_mcas_from_outflows
+2025-05-17 10:32:39,289 - INFO - Found 0 Z-score outliers and 0 IQR outliers for distinct_mcas_from_outflows
+2025-05-17 10:32:39,569 - INFO - Analyzing metric: distinct_mcas_from_inflows
+2025-05-17 10:32:39,569 - INFO - Processing data for metric: distinct_mcas_from_inflows
+2025-05-17 10:32:40,383 - INFO - Found 0 Z-score outliers and 0 IQR outliers for distinct_mcas_from_inflows
+2025-05-17 10:32:40,662 - INFO - Processing group: processing_quality
+2025-05-17 10:32:40,663 - INFO - Analyzing metric: category_coverage
+2025-05-17 10:32:40,663 - INFO - Processing data for metric: category_coverage
+2025-05-17 10:32:41,491 - INFO - Found 0 Z-score outliers and 0 IQR outliers for category_coverage
+2025-05-17 10:32:41,764 - INFO - Analyzing metric: merchant_coverage
+2025-05-17 10:32:41,764 - INFO - Processing data for metric: merchant_coverage
+2025-05-17 10:32:42,582 - INFO - Found 1 Z-score outliers and 0 IQR outliers for merchant_coverage
+2025-05-17 10:32:42,833 - INFO - Analyzing metric: unconnected_account_ratio
+2025-05-17 10:32:42,833 - INFO - Processing data for metric: unconnected_account_ratio
+2025-05-17 10:32:43,632 - INFO - Found 3 Z-score outliers and 88 IQR outliers for unconnected_account_ratio
+2025-05-17 10:32:43,871 - INFO - Processing group: profit_and_loss
+2025-05-17 10:32:43,872 - INFO - Analyzing metric: revenue_daily_average
+2025-05-17 10:32:43,872 - INFO - Processing data for metric: revenue_daily_average
+2025-05-17 10:32:44,698 - INFO - Found 137 Z-score outliers and 904 IQR outliers for revenue_daily_average
+2025-05-17 10:32:45,051 - INFO - Analyzing metric: cogs_daily_average
+2025-05-17 10:32:45,052 - INFO - Processing data for metric: cogs_daily_average
+2025-05-17 10:32:45,867 - INFO - Found 19 Z-score outliers and 657 IQR outliers for cogs_daily_average
+2025-05-17 10:32:46,180 - INFO - Analyzing metric: opex_daily_average
+2025-05-17 10:32:46,180 - INFO - Processing data for metric: opex_daily_average
+2025-05-17 10:32:46,998 - INFO - Found 25 Z-score outliers and 386 IQR outliers for opex_daily_average
+2025-05-17 10:32:47,293 - INFO - Analyzing metric: revenue_sources
+2025-05-17 10:32:47,293 - INFO - Processing data for metric: revenue_sources
+2025-05-17 10:32:48,090 - INFO - Found 22 Z-score outliers and 10 IQR outliers for revenue_sources
+2025-05-17 10:32:48,344 - INFO - Analyzing metric: revenue
+2025-05-17 10:32:48,344 - INFO - Processing data for metric: revenue
+2025-05-17 10:32:49,180 - INFO - Found 63 Z-score outliers and 319 IQR outliers for revenue
+2025-05-17 10:32:49,464 - INFO - Analyzing metric: annualized_revenue
+2025-05-17 10:32:49,464 - INFO - Processing data for metric: annualized_revenue
+2025-05-17 10:32:50,395 - INFO - Found 72 Z-score outliers and 254 IQR outliers for annualized_revenue
+2025-05-17 10:32:50,691 - INFO - Analyzing metric: cogs
+2025-05-17 10:32:50,691 - INFO - Processing data for metric: cogs
+2025-05-17 10:32:51,521 - INFO - Found 19 Z-score outliers and 503 IQR outliers for cogs
+2025-05-17 10:32:51,800 - INFO - Analyzing metric: average_credit_card_spend
+2025-05-17 10:32:51,800 - INFO - Processing data for metric: average_credit_card_spend
+2025-05-17 10:32:52,618 - INFO - Found 18 Z-score outliers and 285 IQR outliers for average_credit_card_spend
+2025-05-17 10:32:52,928 - INFO - Analyzing metric: opex
+2025-05-17 10:32:52,928 - INFO - Processing data for metric: opex
+2025-05-17 10:32:53,792 - INFO - Found 18 Z-score outliers and 340 IQR outliers for opex
+2025-05-17 10:32:54,080 - INFO - Analyzing metric: revenue_profit_and_loss
+2025-05-17 10:32:54,080 - INFO - Processing data for metric: revenue_profit_and_loss
+2025-05-17 10:32:54,952 - INFO - Found 63 Z-score outliers and 319 IQR outliers for revenue_profit_and_loss
+2025-05-17 10:32:55,253 - INFO - Analyzing metric: annualized_revenue_profit_and_loss
+2025-05-17 10:32:55,253 - INFO - Processing data for metric: annualized_revenue_profit_and_loss
+2025-05-17 10:32:56,104 - INFO - Found 72 Z-score outliers and 254 IQR outliers for annualized_revenue_profit_and_loss
+2025-05-17 10:32:56,391 - INFO - Analyzing metric: cogs_profit_and_loss
+2025-05-17 10:32:56,391 - INFO - Processing data for metric: cogs_profit_and_loss
+2025-05-17 10:32:57,242 - INFO - Found 19 Z-score outliers and 503 IQR outliers for cogs_profit_and_loss
+2025-05-17 10:32:57,527 - INFO - Analyzing metric: opex_profit_and_loss
+2025-05-17 10:32:57,528 - INFO - Processing data for metric: opex_profit_and_loss
+2025-05-17 10:32:58,331 - INFO - Found 18 Z-score outliers and 340 IQR outliers for opex_profit_and_loss
+2025-05-17 10:32:58,616 - INFO - Analyzing metric: revenue_monthly_average
+2025-05-17 10:32:58,617 - INFO - Processing data for metric: revenue_monthly_average
+2025-05-17 10:32:59,423 - INFO - Found 71 Z-score outliers and 256 IQR outliers for revenue_monthly_average
+2025-05-17 10:32:59,710 - INFO - Analyzing metric: revenue_growth_rate
+2025-05-17 10:32:59,710 - INFO - Processing data for metric: revenue_growth_rate
+2025-05-17 10:33:00,519 - INFO - Found 4 Z-score outliers and 55 IQR outliers for revenue_growth_rate
+2025-05-17 10:33:00,790 - INFO - Analyzing metric: gross_operating_cashflow_daily_average
+2025-05-17 10:33:00,790 - INFO - Processing data for metric: gross_operating_cashflow_daily_average
+2025-05-17 10:33:01,623 - INFO - Found 109 Z-score outliers and 323 IQR outliers for gross_operating_cashflow_daily_average
+2025-05-17 10:33:01,928 - INFO - Analyzing metric: net_operating_cashflow_daily_average
+2025-05-17 10:33:01,928 - INFO - Processing data for metric: net_operating_cashflow_daily_average
+2025-05-17 10:33:02,828 - INFO - Found 26 Z-score outliers and 610 IQR outliers for net_operating_cashflow_daily_average
+2025-05-17 10:33:03,157 - INFO - Analyzing metric: gross_operating_cashflow
+2025-05-17 10:33:03,157 - INFO - Processing data for metric: gross_operating_cashflow
+2025-05-17 10:33:04,079 - INFO - Found 79 Z-score outliers and 315 IQR outliers for gross_operating_cashflow
+2025-05-17 10:33:04,379 - INFO - Analyzing metric: net_operating_cashflow
+2025-05-17 10:33:04,379 - INFO - Processing data for metric: net_operating_cashflow
+2025-05-17 10:33:05,222 - INFO - Found 18 Z-score outliers and 588 IQR outliers for net_operating_cashflow
+2025-05-17 10:33:05,511 - INFO - Analyzing metric: gross_operating_cashflow_profit_and_loss
+2025-05-17 10:33:05,512 - INFO - Processing data for metric: gross_operating_cashflow_profit_and_loss
+2025-05-17 10:33:06,328 - INFO - Found 79 Z-score outliers and 315 IQR outliers for gross_operating_cashflow_profit_and_loss
+2025-05-17 10:33:06,619 - INFO - Analyzing metric: net_operating_cashflow_profit_and_loss
+2025-05-17 10:33:06,619 - INFO - Processing data for metric: net_operating_cashflow_profit_and_loss
+2025-05-17 10:33:07,444 - INFO - Found 18 Z-score outliers and 588 IQR outliers for net_operating_cashflow_profit_and_loss
+2025-05-17 10:33:07,737 - INFO - Processing group: risk_flag
+2025-05-17 10:33:07,738 - INFO - Analyzing metric: deposit_days
+2025-05-17 10:33:07,738 - INFO - Processing data for metric: deposit_days
+2025-05-17 10:33:08,562 - INFO - Found 243 Z-score outliers and 65 IQR outliers for deposit_days
+2025-05-17 10:33:08,932 - INFO - Analyzing metric: nsf_fees
+2025-05-17 10:33:08,932 - INFO - Processing data for metric: nsf_fees
+2025-05-17 10:33:09,766 - INFO - Found 50 Z-score outliers and 990 IQR outliers for nsf_fees
+2025-05-17 10:33:10,072 - INFO - Analyzing metric: nsf_days
+2025-05-17 10:33:10,072 - INFO - Processing data for metric: nsf_days
+2025-05-17 10:33:10,898 - INFO - Found 83 Z-score outliers and 416 IQR outliers for nsf_days
+2025-05-17 10:33:11,223 - INFO - Analyzing metric: debt_collection
+2025-05-17 10:33:11,223 - INFO - Processing data for metric: debt_collection
+2025-05-17 10:33:12,048 - INFO - Found 0 Z-score outliers and 0 IQR outliers for debt_collection
+2025-05-17 10:33:12,325 - INFO - Analyzing metric: atm_withdrawals
+2025-05-17 10:33:12,325 - INFO - Processing data for metric: atm_withdrawals
+2025-05-17 10:33:13,174 - INFO - Found 13 Z-score outliers and 136 IQR outliers for atm_withdrawals
+2025-05-17 10:33:13,438 - INFO - Analyzing metric: tax_payments
+2025-05-17 10:33:13,438 - INFO - Processing data for metric: tax_payments
+2025-05-17 10:33:14,324 - INFO - Found 15 Z-score outliers and 49 IQR outliers for tax_payments
+2025-05-17 10:33:14,582 - INFO - Analyzing metric: tax_payment_amount
+2025-05-17 10:33:14,582 - INFO - Processing data for metric: tax_payment_amount
+2025-05-17 10:33:15,412 - INFO - Found 13 Z-score outliers and 118 IQR outliers for tax_payment_amount
+2025-05-17 10:33:15,671 - INFO - Analyzing metric: negative_balance_days
+2025-05-17 10:33:15,672 - INFO - Processing data for metric: negative_balance_days
+2025-05-17 10:33:16,572 - INFO - Found 142 Z-score outliers and 493 IQR outliers for negative_balance_days
+2025-05-17 10:33:16,879 - INFO - Analyzing metric: negative_balance_days_by_account
+2025-05-17 10:33:16,879 - INFO - Processing data for metric: negative_balance_days_by_account
+2025-05-17 10:33:17,727 - INFO - Found 3 Z-score outliers and 419 IQR outliers for negative_balance_days_by_account
+2025-05-17 10:33:18,032 - INFO - Generating analysis report...
+2025-05-17 10:33:18,037 - INFO - Report generated successfully
+2025-05-17 10:33:18,037 - INFO - Analysis complete. Check reports in metric_distributions/output/reports and plots in metric_distributions/output/plots

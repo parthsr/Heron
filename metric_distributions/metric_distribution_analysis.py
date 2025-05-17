@@ -146,7 +146,7 @@ def analyze_metric(metric_name, metric_group, unit=''):
     }
 
 def plot_distribution(df, metric_name, metric_group, unit_str=''):
-    """Create a probability density (KDE) plot for a specific metric"""
+    """Create a probability density plot for a specific metric (linear scale only)"""
     plt.figure(figsize=(8, 6))
     
     # Calculate statistics for better plot scaling
@@ -154,28 +154,33 @@ def plot_distribution(df, metric_name, metric_group, unit_str=''):
     std_val = df['metric_value'].std()
     median_val = df['metric_value'].median()
     
-    # Create two subplots: one with log scale, one without
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 12))
+    fig, ax1 = plt.subplots(1, 1, figsize=(10, 6))
     
     # Regular scale plot
-    sns.kdeplot(data=df['metric_value'], fill=True, ax=ax1)
-    ax1.set_title(f'Density Curve of {metric_name}{unit_str} (Linear Scale)')
+    try:
+        # Try using KDE first
+        kde = stats.gaussian_kde(df['metric_value'].dropna())
+        x_range = np.linspace(df['metric_value'].min(), df['metric_value'].max(), 1000)
+        density = kde(x_range)
+        # Normalize the density to ensure it integrates to 1
+        density = density / np.trapz(density, x_range)
+        
+        ax1.plot(x_range, density, label='Density')
+        ax1.fill_between(x_range, density, alpha=0.3)
+    except np.linalg.LinAlgError:
+        # Fall back to histogram if KDE fails
+        hist, bins = np.histogram(df['metric_value'].dropna(), bins=50, density=True)
+        ax1.hist(df['metric_value'].dropna(), bins=50, density=True, alpha=0.3, label='Histogram')
+        ax1.plot(bins[:-1], hist, label='Density')
+    
+    ax1.set_title(f'Probability Density of {metric_name}{unit_str} (Linear Scale)')
     ax1.set_xlabel(f'Value{unit_str}')
-    ax1.set_ylabel('Density')
+    ax1.set_ylabel('Probability Density')
     
     # Add vertical lines for mean and median
     ax1.axvline(mean_val, color='red', linestyle='--', label=f'Mean: {mean_val:,.2f}')
     ax1.axvline(median_val, color='green', linestyle='--', label=f'Median: {median_val:,.2f}')
     ax1.legend()
-    
-    # Log scale plot (only for positive values)
-    positive_data = df[df['metric_value'] > 0]['metric_value']
-    if not positive_data.empty:
-        sns.kdeplot(data=positive_data, fill=True, ax=ax2)
-        ax2.set_xscale('log')
-        ax2.set_title(f'Density Curve of {metric_name}{unit_str} (Log Scale, Positive Values Only)')
-        ax2.set_xlabel(f'Value{unit_str} (log scale)')
-        ax2.set_ylabel('Density')
     
     plt.tight_layout()
     filename = f"{metric_group}_{metric_name}_density.png"
