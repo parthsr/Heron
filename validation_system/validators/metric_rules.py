@@ -1,5 +1,5 @@
 from typing import Dict, List, Optional, Union, Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 
 class ValidationType(Enum):
@@ -15,6 +15,7 @@ class ValidationType(Enum):
     PERCENTAGE = "percentage"
     ARRAY = "array"
     CASHFLOW = "cashflow"
+    CUSTOM_VALIDATION = "custom_validation"
 
 @dataclass
 class MetricRule:
@@ -24,7 +25,7 @@ class MetricRule:
     max_value: Optional[Union[float, Callable]] = None
     description: str = ""
     severity: str = "error"
-    dependencies: List[str] = None
+    dependencies: List[str] = field(default_factory=list)
     custom_validation: Optional[Callable] = None
 
 class MetricRules:
@@ -57,6 +58,28 @@ class MetricRules:
         def get_negative_range(value: float) -> tuple:
             """Value should be negative (less than or equal to 0)"""
             return (None, 0)
+
+        # Custom validation function to check if two metrics are equal
+        # This function would need access to the values of both metrics.
+        # The current MetricRule custom_validation signature only takes one value.
+        # You might need to adjust the validation framework to pass a dictionary
+        # of all metric values being validated to the custom_validation function,
+        # or define a custom validation logic outside of the MetricRule definition
+        # that iterates through these pairs and performs the comparison.
+
+        # For demonstration, let's assume a validation system that can pass
+        # dependent metric values to a custom validator keyed by dependencies.
+        # The custom validation function would then look up the dependent metric's value.
+        def check_equality(value: float, dependent_values: Dict[str, float]) -> bool:
+            """Checks if the value is equal to the value of the specified dependent metric."""
+            # Assuming the dependency is the second metric in the pair
+            dependent_metric_name = list(dependent_values.keys())[0]
+            dependent_value = dependent_values.get(dependent_metric_name)
+            if dependent_value is None:
+                # Handle case where dependent metric value is not available
+                print(f"Warning: Dependent metric '{dependent_metric_name}' value not available for comparison.")
+                return False # Or True, depending on desired behavior when data is missing
+            return abs(value - dependent_value) < 1e-9 # Use a small tolerance for float comparison
 
         self.rules: Dict[str, List[MetricRule]] = {
             "balance": [
@@ -189,7 +212,49 @@ class MetricRules:
                 MetricRule("gross_operating_cashflow_daily_average", ValidationType.CASHFLOW, get_cashflow_range,
                           None, "Average daily gross operating cashflow can be positive or negative"),
                 MetricRule("net_operating_cashflow_daily_average", ValidationType.CASHFLOW, get_cashflow_range,
-                          None, "Average daily net operating cashflow can be positive or negative")
+                          None, "Average daily net operating cashflow can be positive or negative"),
+                MetricRule(
+                    metric_name="revenue_profit_and_loss_equals_revenue",
+                    validation_type=ValidationType.CUSTOM_VALIDATION,
+                    description="Revenue from P&L view should equal standard Revenue",
+                    dependencies=["revenue"],
+                    custom_validation=check_equality
+                ),
+                MetricRule(
+                    metric_name="annualized_revenue_profit_and_loss_equals_annualized_revenue",
+                    validation_type=ValidationType.CUSTOM_VALIDATION,
+                    description="Annualized Revenue from P&L view should equal standard Annualized Revenue",
+                    dependencies=["annualized_revenue"],
+                    custom_validation=check_equality
+                ),
+                MetricRule(
+                    metric_name="cogs_profit_and_loss_equals_cogs",
+                    validation_type=ValidationType.CUSTOM_VALIDATION,
+                    description="COGS from P&L view should equal standard COGS",
+                    dependencies=["cogs"],
+                    custom_validation=check_equality
+                ),
+                MetricRule(
+                    metric_name="opex_profit_and_loss_equals_opex",
+                    validation_type=ValidationType.CUSTOM_VALIDATION,
+                    description="Opex from P&L view should equal standard Opex",
+                    dependencies=["opex"],
+                    custom_validation=check_equality
+                ),
+                MetricRule(
+                    metric_name="gross_operating_cashflow_profit_and_loss_equals_gross_operating_cashflow",
+                    validation_type=ValidationType.CUSTOM_VALIDATION,
+                    description="Gross Operating Cashflow from P&L view should equal standard Gross Operating Cashflow",
+                    dependencies=["gross_operating_cashflow"],
+                    custom_validation=check_equality
+                ),
+                MetricRule(
+                    metric_name="net_operating_cashflow_profit_and_loss_equals_net_operating_cashflow",
+                    validation_type=ValidationType.CUSTOM_VALIDATION,
+                    description="Net Operating Cashflow from P&L view should equal standard Net Operating Cashflow",
+                    dependencies=["net_operating_cashflow"],
+                    custom_validation=check_equality
+                ),
             ],
             "risk_flag": [
                 MetricRule("deposit_days", ValidationType.NON_NEGATIVE, 0, None,

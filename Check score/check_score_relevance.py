@@ -5,9 +5,11 @@ from sklearn.impute import SimpleImputer
 # from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
+from sklearn.feature_selection import SelectKBest, f_regression
+from sklearn.decomposition import PCA
 
 # 1. Load the wide-format metrics file
-df_wide = pd.read_csv('./company_metrics_wide_normalized.csv')
+df_wide = pd.read_csv('./company_metrics_wide.csv')
 
 # Drop only the heron_id column
 if 'heron_id' in df_wide.columns:
@@ -20,9 +22,9 @@ DROP_COL   = 'confidence_latest'
 X_full = df_wide.drop(columns=[TARGET_COL])
 y      = df_wide[TARGET_COL]
 
-# 3a. Surrogate model WITH confidence_latest
+# 3a. Baseline Linear Regression WITH confidence_latest
 X_train, X_test, y_train, y_test = train_test_split(
-    X_full, y, test_size=0.3, random_state=42)
+    X_full, y, test_size=0.2, random_state=30)
 
 pipe_full = Pipeline([
     ('imp', SimpleImputer(strategy='median')),
@@ -32,20 +34,19 @@ pipe_full.fit(X_train, y_train)
 pred_full = pipe_full.predict(X_test)
 r2_full = r2_score(y_test, pred_full)
 
-# 3b. Surrogate model WITHOUT confidence_latest
-X_no_conf = X_full.drop(columns=[DROP_COL])
-Xtr2, Xts2, ytr2, yts2 = train_test_split(
-    X_no_conf, y, test_size=0.3, random_state=42)
+# 3b. Linear Regression WITHOUT confidence_latest
+X_without_confidence = X_full.drop(columns=[DROP_COL])
+X_train_without, X_test_without, y_train, y_test = train_test_split(
+    X_without_confidence, y, test_size=0.3, random_state=30)
 
-pipe_nc = Pipeline([
+pipe_without = Pipeline([
     ('imp', SimpleImputer(strategy='median')),
-    ('lr',  LinearRegression()),
+    ('lr', LinearRegression()),
 ])
-pipe_nc.fit(Xtr2, ytr2)
-pred_nc = pipe_nc.predict(Xts2)
-r2_nc = r2_score(yts2, pred_nc)
+pipe_without.fit(X_train_without, y_train)
+pred_without = pipe_without.predict(X_test_without)
+r2_without = r2_score(y_test, pred_without)
 
 # 4. Report
-print(f"R² WITH  {DROP_COL}: {r2_full:0.3f}")
-print(f"R² WITHOUT {DROP_COL}: {r2_nc:0.3f}")
-print(f"ΔR² (drop-column importance): {r2_full - r2_nc:+0.3f}")
+print(f"Baseline Linear Regression R² WITH {DROP_COL}: {r2_full:0.3f}")
+print(f"Linear Regression R² WITHOUT {DROP_COL}: {r2_without:0.3f}")
