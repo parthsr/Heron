@@ -1,12 +1,17 @@
 import pandas as pd
 import numpy as np
+from scipy import stats
+import os
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Read the company metrics data
 df = pd.read_csv('/Users/parthsrivastava/Heron/company_metrics.csv')
 
 # Split companies into high and low heron score groups
-high_score_companies = df[df['metric_label'] == 'heron_score'][df['metric_value'] > 1]
-low_score_companies = df[df['metric_label'] == 'heron_score'][df['metric_value'] <= 1]
+high_score_companies = df[df['metric_label'] == 'heron_score'][df['metric_value'] > 500]
+low_score_companies = df[df['metric_label'] == 'heron_score'][df['metric_value'] <= 500]
 
 # Get the heron_ids for each group
 high_score_ids = high_score_companies['heron_id'].unique()
@@ -27,6 +32,9 @@ for metric in all_metrics:
     low_metric_data = low_score_metrics[low_score_metrics['metric_label'] == metric]['metric_value']
     
     if not high_metric_data.empty and not low_metric_data.empty:
+        # Perform t-test
+        t_stat, p_value = stats.ttest_ind(high_metric_data, low_metric_data, equal_var=False)
+        
         comparison_data.append({
             'metric': metric,
             'high_score_count': len(high_metric_data),
@@ -42,7 +50,9 @@ for metric in all_metrics:
             'high_score_max': high_metric_data.max(),
             'low_score_max': low_metric_data.max(),
             'mean_difference': high_metric_data.mean() - low_metric_data.mean(),
-            'median_difference': high_metric_data.median() - low_metric_data.median()
+            'median_difference': high_metric_data.median() - low_metric_data.median(),
+            'p_value': p_value,
+            'significant': p_value < 0.05
         })
 
 # Convert to DataFrame
@@ -53,7 +63,7 @@ comparison_df['abs_mean_diff'] = comparison_df['mean_difference'].abs()
 comparison_df = comparison_df.sort_values('abs_mean_diff', ascending=False)
 
 # Print summary
-print(f"\nComparison between companies with heron_score > 1 (n={len(high_score_ids)}) and heron_score <= 1 (n={len(low_score_ids)})")
+print(f"\nComparison between companies with heron_score > 500 (n={len(high_score_ids)}) and heron_score <= 500 (n={len(low_score_ids)})")
 print("\nTop 20 metrics with largest differences between groups:")
 
 # Format the output for better readability
@@ -65,7 +75,8 @@ pd.set_option('display.float_format', lambda x: '%.3f' % x)
 top_metrics = comparison_df.head(20)
 print("\nMetric comparisons (high score vs low score):")
 for _, row in top_metrics.iterrows():
-    print(f"\n{row['metric']}:")
+    significance = "***" if row['significant'] else "ns"
+    print(f"\n{row['metric']} {significance}:")
     print(f"  High Score (n={row['high_score_count']}):")
     print(f"    Mean: {row['high_score_mean']:.3f}")
     print(f"    Median: {row['high_score_median']:.3f}")
@@ -79,7 +90,14 @@ for _, row in top_metrics.iterrows():
     print(f"  Difference (High - Low):")
     print(f"    Mean diff: {row['mean_difference']:.3f}")
     print(f"    Median diff: {row['median_difference']:.3f}")
+    print(f"    p-value: {row['p_value']:.3f}")
 
-# Save detailed comparison to CSV
-comparison_df.to_csv('heron_score_comparison.csv', index=False)
-print("\nDetailed comparison has been saved to 'heron_score_comparison.csv'") 
+# Print summary of significant metrics
+significant_metrics = comparison_df[comparison_df['significant']]
+print(f"\nNumber of metrics with statistically significant differences: {len(significant_metrics)}")
+print(f"Total number of metrics analyzed: {len(comparison_df)}")
+
+# Save detailed comparison to CSV in the same directory as the script
+output_path = os.path.join(script_dir, 'heron_score_comparison.csv')
+comparison_df.to_csv(output_path, index=False)
+print(f"\nDetailed comparison has been saved to '{output_path}'") 
