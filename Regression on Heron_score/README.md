@@ -1,17 +1,93 @@
-# Heron Score Calculation System
-
-This system calculates the Heron score, a metric that indicates the likelihood of company default based on various financial and operational metrics.
+# Heron Score Regression Analysis
 
 ## Overview
+This directory contains the complete regression analysis system for the Heron score, including model training, evaluation, and score calculation. The system uses various company metrics to predict and calculate Heron scores through a regression-based approach.
 
-The Heron score is calculated using a machine learning model that takes into account multiple features including:
-- Financial metrics (inflow growth rate, latest balance, debt repayment)
-- Operational metrics (transaction counts, customer interactions)
-- Risk indicators (fraud scores, risk assessments)
-- Data quality metrics (confidence, coverage, freshness)
-- Interaction features (balance-revenue ratios, risk scores)
+## Components
 
-A score greater than 1 indicates a higher likelihood of company default.
+### 1. Data Preparation and Analysis
+- `prepare_data.py`: Prepares and preprocesses data for model training
+- `calculate_normalized_correlations.py`: Computes normalized correlations between metrics
+- `heron_score_correlations.csv`: Raw correlation coefficients
+- `heron_score_normalized_correlations.csv`: Normalized correlation coefficients
+
+### 2. Model Training and Export
+- `train_model.py`: Main script for training the regression model
+  - Feature selection
+  - Model training
+  - Cross-validation
+  - Performance evaluation
+- `model.pkl`: Trained model file
+- `regression_coefficients.csv`: Model coefficients for each feature
+- `regression_formula.txt`: Complete regression formula
+- `export_regression_formula.py`: Exports the regression formula
+
+### 3. Score Calculation
+- `calculate_scores.py`: Calculates Heron scores using the trained model
+- `heron_calculator.py`: Core calculator class for Heron score computation
+
+## Usage
+
+### Training the Model
+```python
+# Train the model
+python train_model.py
+```
+
+### Calculating Scores
+```python
+# Calculate scores for new data
+python calculate_scores.py
+```
+
+### Exporting Formula
+```python
+# Export the regression formula
+python export_regression_formula.py
+```
+
+## Dependencies
+See `requirements.txt` for full list:
+- pandas
+- numpy
+- scikit-learn
+- joblib
+
+## Model Details
+
+### Features
+The model uses various company metrics including:
+- Revenue metrics
+- Operating metrics
+- Balance metrics
+- Tax and payment metrics
+- Debt and investment metrics
+- NSF-related metrics
+
+### Output
+- Trained model file (`model.pkl`)
+- Regression coefficients (`regression_coefficients.csv`)
+- Regression formula (`regression_formula.txt`)
+- Correlation analysis results
+- Score calculations
+
+## Analysis Files
+
+### Correlation Analysis
+- `heron_score_correlations.csv`: Raw correlations with Heron score
+- `heron_score_normalized_correlations.csv`: Normalized correlations
+
+### Model Outputs
+- `regression_coefficients.csv`: Feature importance and coefficients
+- `regression_formula.txt`: Complete scoring formula
+- `model.pkl`: Serialized model for predictions
+
+## Notes
+- The regression model is trained on historical company data
+- Features are selected based on correlation analysis
+- The model is validated using cross-validation
+- Scores are normalized to a standard scale
+- The system includes both training and prediction capabilities
 
 ## Model Performance
 Current model performance metrics:
